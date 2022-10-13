@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Portfolio Website</title>
+        
+            <style>
+body {
+    text-align: center; 
+}
+header {
+  width: 100%;
+	height: 100px;
+	background-color: #89faf1;
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-size: cover;
+}
+#logo {
+  width: max(140px, 28vw);
+	background-color: #0a0a23;
+  aspect-ratio: 43 / 18;
+	padding: 0.2rem;
+}
+nav {
+  width: 35%;
+	max-width: 300px;
+	height: 50px;
+    color: #0f5396;
+}
+nav > ul > li:hover {
+  background-color: #dfdfe2;
+  color: #1b1b32;
+  cursor: pointer;
+}
+
+
+li > a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 70%;
+}
+    /*#logo {
+        max-height: 100%; 
+        text-align: right;
+        max-width: 6px;*/
+        
+    }
+    #title {
+    color: #f1be32;
+	font-size: 100%;
+  text-align: center;
+   text-decoration: underline; 
+   max-width: 20%;
+    }
+    #div {
+        height: ;
+        width: 4px; 
+    }
+    #mypic {
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        display: flex; 
+        float: inherit; 
+        /*left: 10%;
+        transform: translate(110%, -30%);*/
+    }
+  h2 {
+      font-size: 200%;
+  }
+  div {
+      font-size: 100%;
+      width: 100%;
+  } 
+  fieldet {
+      height: 150%;
+  } 
+            
+            </style>
+        
+        
+    </head>
+    <body>
+        <header>
+            <video poster="Header.png" loop id="logo" src="Header.mp4" autoplay>Intro Video</video>
+            <h1 id="title">My Portfolio</h1>
+            <ul>
+            <nav>
+                
+                <li><a href="">Intro</a></li>
+                <li><a href="">Projects</a></li>
+                <li><a href="">Footer</a></li>
+                
+            </nav></ul>
+        </header>
+     <br /><br /><br /><br />
+           <br /><br /><br />
+           <section>
+               <img src="Mypic.png" alt="My pic" id="mypic" />
+           </section>
+           <section>
+               <h2>Projects</h2>
+               <fieldset>
+               <legend>HTML and CSS</legend>
+               
+                   <ol>
+                 <li>Catphoto App</li>
+                <div>
+                   <button onclick="assignbtn1()">Check</button>
+               <button onclick="returnbtn1()">Return</button>
+               <p id="paragraph1"></p>
+               </div>
+               
+               
+                 <li>Cafe Menu</li>
+               <div>
+                   <button onclick="assignbtn2()">Check</button>
+               <button onclick="returnbtn2()">Return</button>
+               <p id="paragraph2"></p>
+               </div>
+             
+                 <li>Color Markers</li>
+               <div>
+                   <button onclick="assignbtn3()">Check</button>
+               <button onclick="returnbtn3()">Return</button>
+               <p id="paragraph3"></p>
+               </div>
+               
+               <li>Registration Form</li>
+               <div>
+                  <button onclick="assignbtn4()">Check</button>
+               <button onclick="returnbtn4()">Return</button>
+               <p id="paragraph4"></p>
+               </div>
+               
+               <li>Rothko Painting</li>                <div>
+                   <button onclick="assignbtn5()">Check</button>
+               <button onclick="returnbtn5()">Return</button>
+               <p id="paragraph5"></p>
+               </div>
+               
+               <li>Photo Gallery</li>
+               <div>
+                  <button onclick="assignbtn6()">Check</button>
+               <button onclick="returnbtn6()">Return</button>
+               <p id="paragraph6"></p>
+               </div>
+               
+               <li>Nutrition Label</li>
+               <div>
+                   <button onclick="assignbtn7()">Check</button>
+               <button onclick="returnbtn7()">Return</button>
+               <p id="paragraph7"></p>
+               </div>
+               
+               <li>Balance Sheet</li>
+               <div>
+                   <button onclick="assignbtn8()">Check</button>
+               <button onclick="returnbtn8()">Return</button>
+               <p id="paragraph8"></p>
+               </div>
+                   
+               <li>Accessibility Quiz</li>          
+               <div>
+                   <button onclick="assignbtn9()">Check</button>
+               <button onclick="returnbtn9()">Return</button>
+               <p id="paragraph9"></p>
+               </div>
+               <div>
+               <li>A Cat photo App</li>
+                   <button onclick="assignbtn10()">Check</button>
+               <button onclick="returnbtn10()">Return</button>
+               <p id="paragraph10"></p>
+               </div>
+               <div>
+                   11.A Cat photo App
+                   <button onclick="assignbtn11()">Check</button>
+               <button onclick="returnbtn11()">Return</button>
+               <p id="paragraph11"></p>
+               </div>
+               <div>
+                   12.A Cat photo App
+                   <button onclick="assignbtn12()">Check</button>
+               <button onclick="returnbtn12()">Return</button>
+               <p id="paragraph12"></p>
+               </div>
+               <div>
+                   13.A Cat photo App
+                   <button onclick="assignbtn13()">Check</button>
+               <button onclick="returnbtn13()">Return</button>
+               <p id="paragraph13"></p>
+               </div>
+                   14. Ferris Wheel
+                   <button onclick="assignbtn14()">Check</button>
+               <button onclick="returnbtn14()">Return</button>
+               <p id="paragraph14"></p>
+               </div>
+                   15.A Cat photo App
+                   <button onclick="assignbtn15()">Check</button>
+               <button onclick="returnbtn15()">Return</button>
+               <p id="paragraph15"></p>
+               </div>
+               
+               
+               </fieldset>
+       </section>
+       </body>
+        <script>
+    let paragraph1 = document.getElementById("paragraph1")
+    let paragraph2 = document.getElementById("paragraph2")
+     let paragraph3 = document.getElementById("paragraph3")
+     let paragraph4 = document.getElementById("paragraph4")
+     let paragraph5 = document.getElementById("paragraph5")
+     let paragraph6 = document.getElementById("paragraph6")
+     let paragraph7 = document.getElementById("paragraph7")
+     let paragraph8 = document.getElementById("paragraph8")
+     let paragraph9 = document.getElementById("paragraph9")
+     let paragraph10 = document.getElementById("paragraph10")
+     let paragraph11 = document.getElementById("paragraph11")
+     let paragraph12 = document.getElementById("paragraph12")
+     let paragraph13 = document.getElementById("paragraph13")
+     let paragraph14 = document.getElementById("paragraph14")
+     let paragraph15 = document.getElementById("paragraph15")
+     
+     
+     
+        let text1 = 
+                        `
+                        
+                        <iframe name="demo" height="300" src="Catphoto app pro 1.html" width="400" style="border: 0px;"></iframe>
+                        `
+        let text2 = 
+                        `
+                        <p>Scroll down to view</p>
+                        <iframe name="demo" height="300" src="Cafe menu pro 2.html" width="400" style="border: 0px;"></iframe>
+                        `
+        let text3 = 
+                        `
+                        
+                        <iframe name="demo" height="300" src="Color markers pro 3.html" width="400" style="border: 0px;"></iframe>
+                        `
+        let text4 = 
+                        `
+                        
+                        <iframe name="demo" height="300" src="Registration form pro 4.html" width="400" style="border: 0px;"></iframe>
+                        `    
+        let text5 = 
+                        `
+                        
+                        <iframe name="demo" height="300" src="Rothko Painting pro5.html" width="400" style="border: 0px;"></iframe>
+                        `
+        let text6 = 
+                      `  <iframe name="demo" height="300" src="Photo Gallerypro 6.html" width="400" style="border: 0px;"></iframe>
+                        `    
+        let text7 = 
+                        
+                    `    <iframe name="demo" height="300" src="Nutrition Label pro 7.html" width="400" style="border: 0px;"></iframe>
+                        `  
+        let text8 = 
+                        
+                      `  <iframe name="demo" height="300" src="Balancesheet pro 8.html" width="400" style="border: 0px;"></iframe>
+                        `     
+        let text9 = 
+                        
+                     `   <iframe name="demo" height="300" src="Accessibility quiz pro 9.html" width="400" style="border: 0px;"></iframe>
+                        `    
+        let text10 = 
+                        
+                      `  <iframe name="demo" height="300" src="Catphoto app pro 1.html" width="400" style="border: 0px;"></iframe>
+                        `           
+        let text11 = 
+                        
+                       ` <iframe name="demo" height="300" src="Catphoto app pro 1.html" width="400" style="border: 0px;"></iframe>
+                        `      
+        let text12 = 
+                        
+                       ` <iframe name="demo" height="300" src="Catphoto app pro 1.html" width="400" style="border: 0px;"></iframe>`
+                        
+        let text13 = 
+                        
+                        
+                       ` <iframe name="demo" height="300" src="Catphoto app pro 1.html" width="400" style="border: 0px;"></iframe>
+                        `
+                        
+        let text14 = 
+                        
+                        
+                       ` <iframe name="demo" height="300" src="Ferris wheel pro 14.html" width="400" style="border: 0px;"></iframe>
+                        `      
+                        
+        let text15 = 
+                        
+                        
+                       ` <iframe name="demo" height="300" src="Catphoto app pro 1.html" width="400" style="border: 0px;"></iframe>
+                        `                
+                        
+                        
+                        
+       function assignbtn1() {
+           paragraph1.innerHTML = text1;
+       }
+       function returnbtn1() {
+           paragraph1.textContent = "";
+       }
+       
+       
+       
+       function assignbtn2() {
+           paragraph2.innerHTML = text2;
+       }
+       function returnbtn2() {
+           paragraph2.textContent = "";
+       }
+       
+       
+       
+       function assignbtn3() {
+           paragraph3.innerHTML = text3;
+       }
+       function returnbtn3() {
+           paragraph3.textContent = "";
+       }
+       
+       
+       
+       function assignbtn4() {
+           paragraph4.innerHTML = text4;
+       }
+       function returnbtn4() {
+           paragraph4.textContent = "";
+       }
+       
+       
+       
+       
+       function assignbtn5() {
+           paragraph5.innerHTML = text5;
+       }
+       function returnbtn5() {
+           paragraph5.textContent = "";
+       }
+       
+       
+       
+       
+       function assignbtn6() {
+           paragraph6.innerHTML = text6;
+       }
+       function returnbtn6() {
+           paragraph6.textContent = "";
+       }
+       
+       
+       
+       
+       function assignbtn7() {
+           paragraph7.innerHTML = text7;
+       }
+       function returnbtn7() {
+           paragraph7.textContent = "";
+       }
+       
+       
+       
+       function assignbtn8() {
+           paragraph8.innerHTML = text8;
+       }
+       function returnbtn8() {
+           paragraph8.textContent = "";
+       }
+       
+       
+       
+       
+       function assignbtn9() {
+           paragraph9.innerHTML = text9;
+       }
+       function returnbtn9() {
+           paragraph9.textContent = "";
+       }
+       
+       
+       
+       
+       function assignbtn10() {
+          paragraph10.innerHTML = text10;
+       }
+       function returnbtn10() {
+           paragraph10.textContent = "";
+       }
+       
+       
+       
+       
+       function assignbtn11() {
+           paragraph11.innerHTML = text11;
+       }
+       function returnbtn11() {
+           paragraph11.textContent = "";
+       }
+       
+       
+       
+       
+       function assignbtn12() {
+           paragraph12.innerHTML = text12;
+       }
+       function returnbtn12() {
+           paragraph12.textContent = "";
+       }
+       
+       
+       
+       
+       function assignbtn13() {
+           paragraph13.innerHTML = text13;
+       }
+       function returnbtn13() {
+           paragraph13.textContent = "";
+       }
+      
+      
+      
+      
+      function assignbtn14() {
+           paragraph14.innerHTML = text14;
+       }
+       function returnbtn14() {
+           paragraph14.textContent = "";
+       }
+       
+       
+       
+       
+      function assignbtn15() {
+           paragraph15.innerHTML = text15;
+       }
+       function returnbtn15() {
+           paragraph15.textContent = "";
+       }
+     
+        </script>
+
+   
+   
+   </html>
+
+
+
+
+
+
