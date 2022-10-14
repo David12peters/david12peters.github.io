@@ -11,8 +11,8 @@ body {
 }
 header {
   width: 100%;
-	height: 100px;
-	background-color: #89faf1;
+	height: 70px;
+	background-color: #0e3310;
 	display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,7 +30,7 @@ nav {
   width: 35%;
 	max-width: 300px;
 	height: 50px;
-    color: #0f5396;
+    color: #fc70a6;
 }
 nav > ul > li:hover {
   background-color: #dfdfe2;
@@ -44,22 +44,16 @@ li > a {
   text-decoration: none;
   font-size: 70%;
 }
-    /*#logo {
-        max-height: 100%; 
-        text-align: right;
-        max-width: 6px;*/
-        
-    }
+    
     #title {
-    color: #f1be32;
-	font-size: 100%;
-  text-align: center;
-   text-decoration: underline; 
+    color: #e132f1;
+	font-size: 30px;
+  text-align: center; 
    max-width: 20%;
     }
     #div {
-        height: ;
-        width: 4px; 
+        height: 2px;
+        width: 2px; 
     }
     #mypic {
         border-radius: 50%;
@@ -67,8 +61,6 @@ li > a {
         width: 100px;
         display: flex; 
         float: inherit; 
-        /*left: 10%;
-        transform: translate(110%, -30%);*/
     }
   h2 {
       font-size: 200%;
@@ -85,11 +77,12 @@ li > a {
         
         
     </head>
-    <body>
+    <body id="body">
         <header>
             <video poster="Header.png" loop id="logo" src="Header.mp4" autoplay>Intro Video</video>
             <h1 id="title">My Portfolio</h1>
             <ul>
+                <!--nav links-->
             <nav>
                 
                 <li><a href="">Intro</a></li>
@@ -106,344 +99,684 @@ li > a {
            <section>
                <h2>Projects</h2>
                <fieldset>
+
+                <!--HTML and CSS Projects-->
+
                <legend>HTML and CSS</legend>
                
                    <ol>
                  <li>Catphoto App</li>
                 <div>
-                   <button onclick="assignbtn1()">Check</button>
-               <button onclick="returnbtn1()">Return</button>
-               <p id="paragraph1"></p>
+                   <button onclick="HCassignbtn1()">Check</button>
+               <button onclick="HCreturnbtn1()">Return</button>
+               <p id="HCparagraph1"></p>
                </div>
                
                
                  <li>Cafe Menu</li>
                <div>
-                   <button onclick="assignbtn2()">Check</button>
-               <button onclick="returnbtn2()">Return</button>
-               <p id="paragraph2"></p>
+                   <button onclick="HCassignbtn2()">Check</button>
+               <button onclick="HCreturnbtn2()">Return</button>
+               <p id="HCparagraph2"></p>
                </div>
              
                  <li>Color Markers</li>
                <div>
-                   <button onclick="assignbtn3()">Check</button>
-               <button onclick="returnbtn3()">Return</button>
-               <p id="paragraph3"></p>
+                   <button onclick="HCassignbtn3()">Check</button>
+               <button onclick="HCreturnbtn3()">Return</button>
+               <p id="HCparagraph3"></p>
                </div>
                
                <li>Registration Form</li>
                <div>
-                  <button onclick="assignbtn4()">Check</button>
-               <button onclick="returnbtn4()">Return</button>
-               <p id="paragraph4"></p>
+                  <button onclick="HCassignbtn4()">Check</button>
+               <button onclick="HCreturnbtn4()">Return</button>
+               <p id="HCparagraph4"></p>
                </div>
                
                <li>Rothko Painting</li>                <div>
-                   <button onclick="assignbtn5()">Check</button>
-               <button onclick="returnbtn5()">Return</button>
-               <p id="paragraph5"></p>
+                   <button onclick="HCassignbtn5()">Check</button>
+               <button onclick="HCreturnbtn5()">Return</button>
+               <p id="HCparagraph5"></p>
                </div>
                
                <li>Photo Gallery</li>
                <div>
-                  <button onclick="assignbtn6()">Check</button>
-               <button onclick="returnbtn6()">Return</button>
-               <p id="paragraph6"></p>
+                  <button onclick="HCassignbtn6()">Check</button>
+               <button onclick="HCreturnbtn6()">Return</button>
+               <p id="HCparagraph6"></p>
                </div>
                
                <li>Nutrition Label</li>
                <div>
-                   <button onclick="assignbtn7()">Check</button>
-               <button onclick="returnbtn7()">Return</button>
-               <p id="paragraph7"></p>
+                   <button onclick="HCassignbtn7()">Check</button>
+               <button onclick="HCreturnbtn7()">Return</button>
+               <p id="HCparagraph7"></p>
                </div>
                
                <li>Balance Sheet</li>
                <div>
-                   <button onclick="assignbtn8()">Check</button>
-               <button onclick="returnbtn8()">Return</button>
-               <p id="paragraph8"></p>
+                   <button onclick="HCassignbtn8()">Check</button>
+               <button onclick="HCreturnbtn8()">Return</button>
+               <p id="HCparagraph8"></p>
                </div>
                    
                <li>Accessibility Quiz</li>          
                <div>
-                   <button onclick="assignbtn9()">Check</button>
-               <button onclick="returnbtn9()">Return</button>
-               <p id="paragraph9"></p>
+                   <button onclick="HCassignbtn9()">Check</button>
+               <button onclick="HCreturnbtn9()">Return</button>
+               <p id="HCparagraph9"></p>
                </div>
-               <div>
+               
                <li>A Cat photo App</li>
-                   <button onclick="assignbtn10()">Check</button>
-               <button onclick="returnbtn10()">Return</button>
-               <p id="paragraph10"></p>
-               </div>
                <div>
-                   11.A Cat photo App
-                   <button onclick="assignbtn11()">Check</button>
-               <button onclick="returnbtn11()">Return</button>
-               <p id="paragraph11"></p>
+                   <button onclick="HCassignbtn10()">Check</button>
+               <button onclick="HCreturnbtn10()">Return</button>
+               <p id="HCparagraph10"></p>
                </div>
-               <div>
-                   12.A Cat photo App
-                   <button onclick="assignbtn12()">Check</button>
-               <button onclick="returnbtn12()">Return</button>
-               <p id="paragraph12"></p>
+
+                   <li>A Cat photo App</li>
+                   <div>
+                   <button onclick="HCassignbtn11()">Check</button>
+               <button onclick="HCreturnbtn11()">Return</button>
+               <p id="HCparagraph11"></p>
                </div>
-               <div>
-                   13.A Cat photo App
-                   <button onclick="assignbtn13()">Check</button>
-               <button onclick="returnbtn13()">Return</button>
-               <p id="paragraph13"></p>
-               </div>
-                   14. Ferris Wheel
-                   <button onclick="assignbtn14()">Check</button>
-               <button onclick="returnbtn14()">Return</button>
-               <p id="paragraph14"></p>
-               </div>
-                   15.A Cat photo App
-                   <button onclick="assignbtn15()">Check</button>
-               <button onclick="returnbtn15()">Return</button>
-               <p id="paragraph15"></p>
+    
+                   <li>A Cat photo App</li>
+                   <div>
+                   <button onclick="HCassignbtn12()">Check</button>
+               <button onclick="HCreturnbtn12()">Return</button>
+               <p id="HCparagraph12"></p>
                </div>
                
-               
+                   <li>A Cat photo App</li>
+                   <div>
+                   <button onclick="HCassignbtn13()">Check</button>
+               <button onclick="HCreturnbtn13()">Return</button>
+               <p id="HCparagraph13"></p>
+               </div>
+                   <li>Ferris Wheel</li>
+                   <div>
+                   <button onclick="HCassignbtn14()">Check</button>
+               <button onclick="HCreturnbtn14()">Return</button>
+               <p id="HCparagraph14"></p>
+               </div>
+                   <li>A Cat photo App</li>
+                   <button onclick="HCassignbtn15()">Check</button>
+               <button onclick="HCreturnbtn15()">Return</button>
+               <p id="HCparagraph15"></p>
+               </div>
+               </ol>
                </fieldset>
+               <fieldset>
+                   <legend>JAVASCRIPT</legend>
+                   <ol>
+                    <li>Counter App</li>
+                   <div>
+                      <button onclick="JSassignbtn1()">Check</button>
+                  <button onclick="JSreturnbtn1()">Return</button>
+                  <p id="JSparagraph1"></p>
+                  </div>
+                  
+                  
+                    <li>Leads Tracker</li>
+                  <div>
+                      <button onclick="JSassignbtn2()">Check</button>
+                  <button onclick="JSreturnbtn2()">Return</button>
+                  <p id="JSparagraph2"></p>
+                  </div>
+                
+                    <li>CALCULATOR</li>
+                  <div>
+                      <button onclick="JSassignbtn3()">Check</button>
+                  <button onclick="JSreturnbtn3()">Return</button>
+                  <p id="JSparagraph3"></p>
+                  </div>
+                  
+                  <li>Registration Form</li>
+                  <div>
+                     <button onclick="JSassignbtn4()">Check</button>
+                  <button onclick="JSreturnbtn4()">Return</button>
+                  <p id="JSparagraph4"></p>
+                  </div>
+                  
+                  <li>Balance Sheet JS</li>                <div>
+                      <button onclick="JSassignbtn5()">Check</button>
+                  <button onclick="JSreturnbtn5()">Return</button>
+                  <p id="JSparagraph5"></p>
+                  </div>
+                  
+                  <li>E-COMMERCE Site JNL</li>
+                  <div>
+                     <button onclick="JSassignbtn6()">Check</button>
+                  <button onclick="JSreturnbtn6()">Return</button>
+                  <p id="JSparagraph6"></p>
+                  </div>
+                  
+                  <li>SHADOW DOG</li>
+                  <div>
+                      <button onclick="JSassignbtn7()">Check</button>
+                  <button onclick="JSreturnbtn7()">Return</button>
+                  <p id="JSparagraph7"></p>
+                  </div>
+                  
+                  <li>RAVEN GAME</li>
+                  <div>
+                      <button onclick="JSassignbtn8()">Check</button>
+                  <button onclick="JSreturnbtn8()">Return</button>
+                  <p id="JSparagraph8"></p>
+                  </div>
+                      
+                  <li>BLACKJACK GAME</li>          
+                  <div>
+                      <button onclick="JSassignbtn9()">Check</button>
+                  <button onclick="JSreturnbtn9()">Return</button>
+                  <p id="JSparagraph9"></p>
+                  </div>
+                  
+                  <li>A Cat photo App</li>
+                  <div>
+                      <button onclick="JSassignbtn10()">Check</button>
+                  <button onclick="JSreturnbtn10()">Return</button>
+                  <p id="JSparagraph10"></p>
+                  </div>
+   
+                      <li>A Cat photo App</li>
+                      <div>
+                      <button onclick="JSassignbtn11()">Check</button>
+                  <button onclick="JSreturnbtn11()">Return</button>
+                  <p id="JSparagraph11"></p>
+                  </div>
+       
+                      <li>A Cat photo App</li>
+                      <div>
+                      <button onclick="JSassignbtn12()">Check</button>
+                  <button onclick="JSreturnbtn12()">Return</button>
+                  <p id="JSparagraph12"></p>
+                  </div>
+                  
+                      <li>A Cat photo App</li>
+                      <div>
+                      <button onclick="JSassignbtn13()">Check</button>
+                  <button onclick="JSreturnbtn13()">Return</button>
+                  <p id="JSparagraph13"></p>
+                  </div>
+                      <li>Ferris Wheel</li>
+                      <div>
+                      <button onclick="JSassignbtn14()">Check</button>
+                  <button onclick="JSreturnbtn14()">Return</button>
+                  <p id="JSparagraph14"></p>
+                  </div>
+                      <li>A Cat photo App</li>
+                      <button onclick="JSassignbtn15()">Check</button>
+                  <button onclick="JSreturnbtn15()">Return</button>
+                  <p id="JSparagraph15"></p>
+                  </div>
+                  </ol>
+               </fieldset>
+
        </section>
        </body>
         <script>
-    let paragraph1 = document.getElementById("paragraph1")
-    let paragraph2 = document.getElementById("paragraph2")
-     let paragraph3 = document.getElementById("paragraph3")
-     let paragraph4 = document.getElementById("paragraph4")
-     let paragraph5 = document.getElementById("paragraph5")
-     let paragraph6 = document.getElementById("paragraph6")
-     let paragraph7 = document.getElementById("paragraph7")
-     let paragraph8 = document.getElementById("paragraph8")
-     let paragraph9 = document.getElementById("paragraph9")
-     let paragraph10 = document.getElementById("paragraph10")
-     let paragraph11 = document.getElementById("paragraph11")
-     let paragraph12 = document.getElementById("paragraph12")
-     let paragraph13 = document.getElementById("paragraph13")
-     let paragraph14 = document.getElementById("paragraph14")
-     let paragraph15 = document.getElementById("paragraph15")
-     
-     
-     
-        let text1 = 
+    let HCparagraph1 = document.getElementById("HCparagraph1")
+    let HCparagraph2 = document.getElementById("HCparagraph2")
+     let HCparagraph3 = document.getElementById("HCparagraph3")
+     let HCparagraph4 = document.getElementById("HCparagraph4")
+     let HCparagraph5 = document.getElementById("HCparagraph5")
+     let HCparagraph6 = document.getElementById("HCparagraph6")
+     let HCparagraph7 = document.getElementById("HCparagraph7")
+     let HCparagraph8 = document.getElementById("HCparagraph8")
+     let HCparagraph9 = document.getElementById("paragraph9")
+     let HCparagraph10 = document.getElementById("HCparagraph10")
+     let HCparagraph11 = document.getElementById("HCparagraph11")
+     let HCparagraph12 = document.getElementById("HCparagraph12")
+     let HCparagraph13 = document.getElementById("HCparagraph13")
+     let HCparagraph14 = document.getElementById("HCparagraph14")
+     let HCparagraph15 = document.getElementById("HCparagraph15")
+
+     let JSparagraph1 = document.getElementById("JSparagraph1")
+     let JSparagraph2 = document.getElementById("JSparagraph2")
+     let JSparagraph3 = document.getElementById("JSparagraph3")
+     let JSparagraph4 = document.getElementById("JSparagraph4")
+     let JSparagraph5 = document.getElementById("JSparagraph5")
+     let JSparagraph6 = document.getElementById("JSparagraph6")
+     let JSparagraph7 = document.getElementById("JSparagraph7")
+     let JSparagraph8 = document.getElementById("JSparagraph8")
+     let JSparagraph9 = document.getElementById("JSparagraph9")
+     let JSparagraph10 = document.getElementById("JSparagraph10")
+     let JSparagraph11 = document.getElementById("JSparagraph11")
+     let JSparagraph12 = document.getElementById("JSparagraph12")
+     let JSparagraph13 = document.getElementById("JSparagraph13")
+     let JSparagraph14 = document.getElementById("JSparagraph14")
+     let JSparagraph15 = document.getElementById("JSparagraph15")
+         
+        let HC1 = 
                         `
                         
-                        <iframe name="demo" height="300" src="Catphoto app pro 1.html" width="400" style="border: 0px;"></iframe>
+                        <iframe name="demo" height="850" src="Catphoto app pro 1.html" width="400" style="border: 0px;"></iframe>
                         `
-        let text2 = 
+        let HC2 = 
                         `
                         <p>Scroll down to view</p>
-                        <iframe name="demo" height="300" src="Cafe menu pro 2.html" width="400" style="border: 0px;"></iframe>
+                        <iframe name="demo" height="750" src="Cafe menu pro 2.html" width="400" style="border: 0px;"></iframe>
                         `
-        let text3 = 
-                        `
-                        
-                        <iframe name="demo" height="300" src="Color markers pro 3.html" width="400" style="border: 0px;"></iframe>
-                        `
-        let text4 = 
+        let HC3 = 
                         `
                         
-                        <iframe name="demo" height="300" src="Registration form pro 4.html" width="400" style="border: 0px;"></iframe>
+                        <iframe name="demo" height="250" src="Color markers pro 3.html" width="400" style="border: 0px;"></iframe>
+                        `
+        let HC4 = 
+                        `
+                        
+                        <iframe name="demo" height="1150" src="Registration form pro 4.html" width="400" style="border: 0px;"></iframe>
                         `    
-        let text5 = 
+        let HC5 = 
                         `
                         
-                        <iframe name="demo" height="300" src="Rothko Painting pro5.html" width="400" style="border: 0px;"></iframe>
+                        <iframe name="demo" height="850" src="Rothko Painting pro5.html" width="750" style="border: 0px;"></iframe>
                         `
-        let text6 = 
+        let HC6 = 
                       `  <iframe name="demo" height="300" src="Photo Gallerypro 6.html" width="400" style="border: 0px;"></iframe>
                         `    
-        let text7 = 
+        let HC7 = 
                         
-                    `    <iframe name="demo" height="300" src="Nutrition Label pro 7.html" width="400" style="border: 0px;"></iframe>
+                    `    <iframe name="demo" height="600" src="Nutrition Label pro 7.html" width="400" style="border: 0px;"></iframe>
                         `  
-        let text8 = 
+        let HC8 = 
                         
-                      `  <iframe name="demo" height="300" src="Balancesheet pro 8.html" width="400" style="border: 0px;"></iframe>
+                      `  <iframe name="demo" height="950" src="Balancesheet pro 8.html" width="400" style="border: 0px;"></iframe>
                         `     
-        let text9 = 
+        let HC9 = 
                         
                      `   <iframe name="demo" height="300" src="Accessibility quiz pro 9.html" width="400" style="border: 0px;"></iframe>
                         `    
-        let text10 = 
+        let HC10 = 
                         
                       `  <iframe name="demo" height="300" src="Catphoto app pro 1.html" width="400" style="border: 0px;"></iframe>
                         `           
-        let text11 = 
+        let HC11 = 
                         
                        ` <iframe name="demo" height="300" src="Catphoto app pro 1.html" width="400" style="border: 0px;"></iframe>
                         `      
-        let text12 = 
+        let HC12 = 
                         
                        ` <iframe name="demo" height="300" src="Catphoto app pro 1.html" width="400" style="border: 0px;"></iframe>`
                         
-        let text13 = 
+        let HC13 = 
                         
                         
                        ` <iframe name="demo" height="300" src="Catphoto app pro 1.html" width="400" style="border: 0px;"></iframe>
                         `
                         
-        let text14 = 
+        let HC14 = 
                         
                         
-                       ` <iframe name="demo" height="300" src="Ferris wheel pro 14.html" width="400" style="border: 0px;"></iframe>
+                       ` <iframe name="demo" height="340" src="Ferris wheel pro 14.html" width="400" style="border: 0px;"></iframe>
                         `      
                         
-        let text15 = 
+        let HC15 = 
                         
                         
                        ` <iframe name="demo" height="300" src="Catphoto app pro 1.html" width="400" style="border: 0px;"></iframe>
-                        `                
+                        `   
+                 
+        let JS1 = 
+                        `
+                        
+                        <iframe name="demo" height="850" src="Catphoto app pro 1.html" width="400" style="border: 0px;"></iframe>
+                        `
+        let JS2 = 
+                        `
+                        <p>Scroll down to view</p>
+                        <iframe name="demo" height="750" src="Cafe menu pro 2.html" width="400" style="border: 0px;"></iframe>
+                        `
+        let JS3 = 
+                        `
+                        
+                        <iframe name="demo" height="250" src="Color markers pro 3.html" width="400" style="border: 0px;"></iframe>
+                        `
+        let JS4 = 
+                        `
+                        
+                        <iframe name="demo" height="1150" src="Registration form pro 4.html" width="400" style="border: 0px;"></iframe>
+                        `    
+        let JS5 = 
+                        `
+                        
+                        <iframe name="demo" height="850" src="Rothko Painting pro5.html" width="750" style="border: 0px;"></iframe>
+                        `
+        let JS6 = 
+                      `  <iframe name="demo" height="300" src="Photo Gallerypro 6.html" width="400" style="border: 0px;"></iframe>
+                        `    
+        let JS7 = 
+                        
+                    `    <iframe name="demo" height="600" src="Game_Dev_1/index.html" width="600" style="border: 0px;"></iframe>
+                        `  
+        let JS8 = 
+                        
+                      `  <iframe name="demo" height="300" src="Game_Dev_5/index.html" width="400" style="border: 0px;"></iframe>
+                        `     
+        let JS9 = 
+                        
+                     `   <iframe name="demo" height="300" src="Accessibility quiz pro 9.html" width="400" style="border: 0px;"></iframe>
+                        `    
+        let JS10 = 
+                        
+                      `  <iframe name="demo" height="300" src="Game_Dev_4/index.html" width="400" style="border: 0px;"></iframe>
+                        `           
+        let JS11 = 
+                        
+                       ` <iframe name="demo" height="300" src="Catphoto app pro 1.html" width="400" style="border: 0px;"></iframe>
+                        `      
+        let JS12 = 
+                        
+                       ` <iframe name="demo" height="300" src="Catphoto app pro 1.html" width="400" style="border: 0px;"></iframe>`
+                        
+        let JS13 = 
                         
                         
+                       ` <iframe name="demo" height="300" src="Catphoto app pro 1.html" width="400" style="border: 0px;"></iframe>
+                        `
                         
-       function assignbtn1() {
-           paragraph1.innerHTML = text1;
+        let JS14 = 
+                        
+                        
+                       ` <iframe name="demo" height="340" src="Ferris wheel pro 14.html" width="400" style="border: 0px;"></iframe>
+                        `      
+                        
+        let JS15 = 
+                        
+                        
+                       ` <iframe name="demo" height="300" src="Catphoto app pro 1.html" width="400" style="border: 0px;"></iframe>
+                        `   
+                        
+       function HCassignbtn1() {
+           HCparagraph1.innerHTML = HC1;
        }
-       function returnbtn1() {
-           paragraph1.textContent = "";
-       }
-       
-       
-       
-       function assignbtn2() {
-           paragraph2.innerHTML = text2;
-       }
-       function returnbtn2() {
-           paragraph2.textContent = "";
-       }
-       
-       
-       
-       function assignbtn3() {
-           paragraph3.innerHTML = text3;
-       }
-       function returnbtn3() {
-           paragraph3.textContent = "";
+       function HCreturnbtn1() {
+           HCparagraph1.textContent = "";
        }
        
        
        
-       function assignbtn4() {
-           paragraph4.innerHTML = text4;
+       function HCassignbtn2() {
+           HCparagraph2.innerHTML = HC2;
        }
-       function returnbtn4() {
-           paragraph4.textContent = "";
-       }
-       
-       
-       
-       
-       function assignbtn5() {
-           paragraph5.innerHTML = text5;
-       }
-       function returnbtn5() {
-           paragraph5.textContent = "";
+       function HCreturnbtn2() {
+           HCparagraph2.textContent = "";
        }
        
        
        
-       
-       function assignbtn6() {
-           paragraph6.innerHTML = text6;
+       function HCassignbtn3() {
+           HCparagraph3.innerHTML = HC3;
        }
-       function returnbtn6() {
-           paragraph6.textContent = "";
+       function HCreturnbtn3() {
+           HCparagraph3.textContent = "";
+       }
+       
+       
+       
+       function HCassignbtn4() {
+           HCparagraph4.innerHTML = HC4;
+       }
+       function HCreturnbtn4() {
+           HCparagraph4.textContent = "";
        }
        
        
        
        
-       function assignbtn7() {
-           paragraph7.innerHTML = text7;
+       function HCassignbtn5() {
+           HCparagraph5.innerHTML = HC5;
        }
-       function returnbtn7() {
-           paragraph7.textContent = "";
-       }
-       
-       
-       
-       function assignbtn8() {
-           paragraph8.innerHTML = text8;
-       }
-       function returnbtn8() {
-           paragraph8.textContent = "";
+       function HCreturnbtn5() {
+           HCparagraph5.textContent = "";
        }
        
        
        
        
-       function assignbtn9() {
-           paragraph9.innerHTML = text9;
+       function HCassignbtn6() {
+        HCparagraph6.innerHTML = HC6;
        }
-       function returnbtn9() {
-           paragraph9.textContent = "";
-       }
-       
-       
-       
-       
-       function assignbtn10() {
-          paragraph10.innerHTML = text10;
-       }
-       function returnbtn10() {
-           paragraph10.textContent = "";
+       function HCreturnbtn6() {
+        HCparagraph6.textContent = "";
        }
        
        
        
        
-       function assignbtn11() {
-           paragraph11.innerHTML = text11;
+       function HCassignbtn7() {
+        HCparagraph7.innerHTML = HC7;
        }
-       function returnbtn11() {
-           paragraph11.textContent = "";
-       }
-       
-       
-       
-       
-       function assignbtn12() {
-           paragraph12.innerHTML = text12;
-       }
-       function returnbtn12() {
-           paragraph12.textContent = "";
+       function HCreturnbtn7() {
+        HCparagraph7.textContent = "";
        }
        
        
        
-       
-       function assignbtn13() {
-           paragraph13.innerHTML = text13;
+       function HCassignbtn8() {
+        HCparagraph8.innerHTML = HC8;
        }
-       function returnbtn13() {
-           paragraph13.textContent = "";
+       function HCreturnbtn8() {
+        HCparagraph8.textContent = "";
+       }
+       
+       
+       
+       
+       function HCassignbtn9() {
+        HCparagraph9.innerHTML = HC9;
+       }
+       function HCreturnbtn9() {
+        HCparagraph9.textContent = "";
+       }
+       
+       
+       
+       
+       function HCassignbtn10() {
+        HCparagraph10.innerHTML = HC10;
+       }
+       function HCreturnbtn10() {
+        HCparagraph10.textContent = "";
+       }
+       
+       
+       
+       
+       function HCassignbtn11() {
+        HCparagraph11.innerHTML = HC11;
+       }
+       function HCreturnbtn11() {
+        HCparagraph11.textContent = "";
+       }
+       
+       
+       
+       
+       function HCassignbtn12() {
+        HCparagraph12.innerHTML = HC12;
+       }
+       function HCreturnbtn12() {
+        HCparagraph12.textContent = "";
+       }
+       
+       
+       
+       
+       function HCassignbtn13() {
+        HCparagraph13.innerHTML = HC13;
+       }
+       function HCreturnbtn13() {
+        HCparagraph13.textContent = "";
        }
       
       
       
       
-      function assignbtn14() {
-           paragraph14.innerHTML = text14;
+      function HCassignbtn14() {
+        HCparagraph14.innerHTML = HC14;
        }
-       function returnbtn14() {
-           paragraph14.textContent = "";
+       function HCreturnbtn14() {
+        HCparagraph14.textContent = "";
        }
        
        
        
        
-      function assignbtn15() {
-           paragraph15.innerHTML = text15;
+      function HCassignbtn15() {
+           HCparagraph15.innerHTML = HC15;
        }
-       function returnbtn15() {
-           paragraph15.textContent = "";
+       function HCreturnbtn15() {
+           HCparagraph15.textContent = "";
        }
-     
+
+     // JAVASCRIPT FUNCTIONS
+
+       function JSassignbtn1() {
+           JSparagraph1.innerHTML = JS1;
+       }
+       function JSreturnbtn1() {
+        JSparagraph1.textContent = "";
+       }
+       
+       
+       
+       function JSassignbtn2() {
+        JSparagraph2.innerHTML = JS2;
+       }
+       function JSreturnbtn2() {
+        JSparagraph2.textContent = "";
+       }
+       
+       
+       
+       function JSassignbtn3() {
+        JSparagraph3.innerHTML = JS3;
+       }
+       function JSreturnbtn3() {
+        JSparagraph3.textContent = "";
+       }
+       
+       
+       
+       function JSassignbtn4() {
+        JSparagraph4.innerHTML = JS4;
+       }
+       function JSreturnbtn4() {
+           JSparagraph4.textContent = "";
+       }
+       
+       
+       
+       
+       function JSassignbtn5() {
+        JSparagraph5.innerHTML = JS5;
+       }
+       function JSreturnbtn5() {
+        JSparagraph5.textContent = "";
+       }
+       
+       
+       
+       
+       function JSassignbtn6() {
+        JSparagraph6.innerHTML = JS6;
+       }
+       function JSreturnbtn6() {
+        JSparagraph6.textContent = "";
+       }
+       
+       
+       
+       
+       function JSassignbtn7() {
+        JSparagraph7.innerHTML = JS7;
+       }
+       function JSreturnbtn7() {
+        JSparagraph7.textContent = "";
+       }
+       
+       
+       
+       function JSassignbtn8() {
+        JSparagraph8.innerHTML = JS8;
+       }
+       function JSreturnbtn8() {
+        JSparagraph8.textContent = "";
+       }
+       
+       
+       
+       
+       function JSassignbtn9() {
+        JSparagraph9.innerHTML = JS9;
+       }
+       function JSreturnbtn9() {
+        JSparagraph9.textContent = "";
+       }
+       
+       
+       
+       
+       function JSassignbtn10() {
+        JSparagraph10.innerHTML = JS10;
+       }
+       function JSreturnbtn10() {
+        JSparagraph10.textContent = "";
+       }
+       
+       
+       
+       
+       function JSassignbtn11() {
+        JSparagraph11.innerHTML = JS11;
+       }
+       function JSreturnbtn11() {
+        JSparagraph11.textContent = "";
+       }
+       
+       
+       
+       
+       function JSassignbtn12() {
+        JSparagraph12.innerHTML = JS12;
+       }
+       function JSreturnbtn12() {
+        JSparagraph12.textContent = "";
+       }
+       
+       
+       
+       
+       function JSassignbtn13() {
+        JSparagraph13.innerHTML = JS13;
+       }
+       function JSreturnbtn13() {
+        JSparagraph13.textContent = "";
+       }
+      
+      
+      
+      
+      function JSassignbtn14() {
+        JSparagraph14.innerHTML = JS14;
+       }
+       function JSreturnbtn14() {
+        JSparagraph14.textContent = "";
+       }
+       
+       
+       
+       
+      function JSassignbtn15() {
+        JSparagraph15.innerHTML = JS15;
+       }
+       function JSreturnbtn15() {
+        JSparagraph15.textContent = "";
+       }
         </script>
 
    
