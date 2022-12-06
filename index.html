@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!--CSS Styles -->
+    <style>
+        body {
+            text-align: center;
+        }
+        header {
+  width: 100%;
+  background-color: #0e3310;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-size: cover;
+  list-style-type: none;
+  top: 0;
+  height: 70px;
+}
+footer {
+    width: 100%;
+  background-color: #0e3310;
+    height: 135px;
+    color: white;
+}
+#footer-link {
+    font-weight: bold;
+    font-size: 20px; 
+}
+
+#logo {
+  width: max(60px, 16vw);
+background-color: #0a0a23;
+  aspect-ratio: 43 / 30;
+padding: 0.2rem;
+max-height: 90%;
+}
+
+#title {
+    color: #e132f1;
+font-size: 30px;
+  text-align: center; 
+   max-width: 20%;
+    }
+
+@media only screen and (max-width: 610px) {
+ body {
+   background-color: lightblue;
+  }
+  #nav-btn {
+      display: none;
+  }
+  #new-nav {
+      display: block;
+  }
+  #start, input[type="submit"] {
+                display: block;
+                margin: 1em auto;
+                width: 60%;
+                font-size: 1.1rem;
+                height: 2em;
+                border-color: white;
+                background-color: #c2ffa8;
+                min-width: 300px;
+            }
+}
+
+@media only screen and (min-width: 610px) {
+    body {
+   background-color: #c2ffa8;
+  }
+  #new-nav {
+      display: none;
+  }
+  #logo-img {
+      height: 500px
+  }
+  .container {
+      height: 900px; 
+      font-weight: bold; 
+      font-size: 50px;
+  }
+  #start, input[type="submit"] {
+                display: block;
+                margin: 1em auto;
+                width: 60%;
+                font-size: 1.1rem;
+                height: 2em;
+                border-color: white;
+                background-color: #c5e6e8;
+                min-width: 450px;
+            }
+.row, .column {
+    height: 500px;
+    font-weight: bold; 
+    font-size: 50px; 
+}
+#name {
+    height: 70px; 
+    width: 350px; 
+    margin: 8px; 
+}
+#country {
+    height: 50px; 
+    width: 300px;
+}
+#subject {
+    height: 800px;
+    width: 300px;
+}
+}
+
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+
+
+
+/* Variables */
+html {
+  --font-family: "Roboto", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #4756df;
+  --secondary-color: #ff7235;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+#burger-menu, #menu-outline {
+    float: right; 
+}
+
+*/
+*/
+
+nav {
+  width: 20%;
+max-width: 300px;
+height: 50px;
+font-size: 5px;
+height: 100%
+}
+
+nav ul {
+   list-style-type: none;
+   color: #fc70a6;
+}
+
+#logo-img {
+    width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #fc70a6;
+}
+#contact-img {
+    border-radius: 50%;
+    width: 80px; 
+    height: 80px; 
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+
+body {
+  font-family: var(--font-family);
+}
+       #nav-btn {
+           border-radius: 15px;
+         border: none;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #0e3310;
+    font-weight: bold;
+    width: 80px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+       }
+       
+.container {
+    width: 100%;
+}
+    
+       
+    </style>
+
+
+<!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Screenshot_2022_1116_193338.png"
+    />
+
+
+<!-- Animate CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>DAVCENT | Web Developent Company</title>
+  </head>
+
+  <body>
+      <header>
+  <video poster="Davcent_design.png" loop id="logo" src="Header.mp4"></video>
+          
+          <h1 id="title">DAVCENT</h1>
+    <!-- Navbar -->
+
+<nav>
+   <ul class="navigation">
+       <button id="nav-btn"><li><a href="#about"><h1>About</h1></li></a></button>
+       <button id="nav-btn"><li><a href="#skills" ><h1>Skills</h1></li></a></button>
+       <button id="nav-btn"><li><a href="projects.html" ><h1>Projects</h1></li></a></button>
+       <button id="nav-btn"><li><a href="#contact" ><h1>Contact</h1></li></a></button></ul>
+        <spam id="new-nav"><ul class="navigation">
+       <li><a href="#about" class="nav-link">About</a></li>
+       <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul></spam></nav>
+      </nav></header>
+      <!--<button class="burger-menu" id="burger-menu">
+        <ion-icon class="bars" name="menu-outline"></ion-icon>
+      </button>-->
+
+
+<!-- Hero Section -->
+<br /><div id="about">
+ <p>Davcent is a web development and design company. we help you build website such as:
+      <ul>
+  <li>E-commerce Website</li>
+  <li>Entertainment Website</li>
+  <li>Personal Blog</li>
+  <li>News and Media Website</li>
+  <li>Recreation and Sports Website</li>
+   </ul>
+   </p>
+
+<!-- More about -->
+ <p> We Specialize in making Beautiful and Expressive Web Interfaces. We create interfaces like Quiz, Games And Customer to Buyer Interface.
+  </p>
+  <p>
+      Which helps with transactions and makes business very easy. Helps You provide video and Audio Description of your Work, through Which you would be able to make the Overall Calculation of transactions done. hereby, increasing progress per time. </p>
+</div>
+    <!-- Skills section -->
+    <div id="skills">
+    <p>
+        We are into:<ul>
+    <li>Web Design and Development</li>
+         <li>Photoshop Design</li>
+         <li>Animation Making </li>
+        </ul>
+    </p></div>
+    <!-- Projects section -->
+  <h2>Projects</h2>
+ <p> Click <a href="projects.html" >here</a> to view some of our already built website and interfaces. 
+  </p>
+  <p>It looks like this:
+  <iframe name="demo" height="500px" src="projects.html" width="100%" style="border: 2px;"></iframe>
+  </p>
+  
+ <img src="Davcent_Logo.png" id="logo-img">
+  <!-- Contact section -->
+  <h2 id="contact">Contact Us</h2>
+  <p>You can contact us on:
+<br />
+    <!-- Social accounts - Fixed to the right --><a href="https://wa.me/message/ZLYHZEGKQTWTK1"><img src="whatsapp-logo.png" id="contact-img" alt="whatsapp" /></a> <img src="facebook-logo.png" id="contact-img" class="icon-default" alt="facebook" /> or
+  <a href="tel:0808784647"><h2>Call Me: 08087846847</h2></a>
+  <p>My Email: davidoluwaseun874@gmail.com</p>
+  <p>You can also leave a message indicating your name, country of residence, your phone number and your Email.</p>
+  <div class="container">
+ <div style="text-align:center">
+<p id="form-p">Swing by for a cup of coffee, or leave us a message:</p>
+</div>
+ <div class="row">
+<div class="column">
+ <form action="https://formsubmit.co/davidoluwaseun874@gmail.com">
+ <label for="name">First Name:</label>
+ <input type="text" id="name" name="firstname" placeholder="Your name.."><br />
+<label for="name">Last Name:</label>
+<input type="text" id="name" name="lastname" placeholder="Your last name.."><br />
+<label for="country">Country:</label>
+ <select id="country" name="country">
+ <option value="australia">Australia</option>
+ <option value="canada">Canada</option>
+ <option value="usa">USA</option>
+ <option value="nigeria">Nigeria</option>
+ </select><br /><br />
+ <label for="subject">Subject</label>  
+   <br /> <textarea id="subject" name="subject" placeholder="In what way would you like to make business with us.." style="height:170px"></textarea>
+    <br /> <input type="submit" value="Submit">
+    </form>
+  </div>
+  </div>
+</div><br />
+    <!-- Footer section -->   
+    <footer>
+        <p>You can can Subscribe to our YouTube Channel <a href="https://youtube.com/@DavidOluwaseun141">@DavidOluwaseun</a> or <a href="https://youtube.com/@techhub8445">@Tech-hub.</a></p>
+        <a id="footer-link" href="david12peters.github.io">@Davcent</a>
+   in cooperation with Jophdasel Nigeria Limited and <a href="https://youtube.com/@onewithgodchannel581">@One With God Channel</a></footer>
+  <!-- Website scripts -->
+    <script>
+        
+    </script>
+
+
+<!-- Ion icons scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
