@@ -301,7 +301,7 @@ body {
 </div>
  <div class="row">
 <div class="column">
- <form action="https://formsubmit.co/davidoluwaseun874@gmail.com" method="POST">
+ /*<form action="https://formsubmit.co/davidoluwaseun874@gmail.com" method="POST">
  <label for="name">First Name:</label>
  <input type="text" id="name" name="firstname" placeholder="Your name.."><br />
 <label for="name">Last Name:</label>
@@ -316,7 +316,35 @@ body {
  <label for="subject">Subject</label>  
    <br /> <textarea id="subject" name="subject" placeholder="In what way would you like to make business with us.." style="height:170px"></textarea>
     <br /> <input type="submit" value="Submit">
-    </form>
+    </form>*/
+<p>Please fill out this form with the required information</p>
+    <form action="https://formsubmit.co/davidoluwaseun874@gmail.com" method="POST">
+      <fieldset>
+        <label>Enter Your First Name: <input type="text" name="first-name" required /></label>
+        <label>Enter Your Last Name: <input type="text" name="last-name" required /></label>
+        <label>Enter Your Email: <input type="email" name="email" required /></label>
+        </fieldset>
+      <fieldset>
+        <label><input type="radio" name="account-type" class="inline" /> Personal Account</label>
+        <label><input type="radio" name="account-type" class="inline" /> Business Account</label>
+        <label>
+          <input type="checkbox" name="terms" class="inline" required /> I accept the <a href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
+			  </label>
+      </fieldset>
+      <fieldset>
+        <label>Upload a profile picture: <input type="file" name="file" /></label>
+        <label>Input your age (years): <input type="number" name="age" min="13" max="120" />
+			  </label>
+        <label>How did you hear about us?
+          <select name="referrer">
+            <option value="">(select one)</option>
+            <option value="1">freeCodeCamp News</option>
+            <option value="2">freeCodeCamp YouTube Channel</option>
+            <option value="3">freeCodeCamp Forum</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+       
   </div>
   </div>
 </div><br />
