@@ -1,0 +1,71 @@
+2D Collision Detection:
+  1 Used for detecting collisions between objects in Games, 
+  2 In particle systems where objects interact with each other.
+  3. Or in situations where you want your canvas animations to interact with regular website elements.
+
+  Collision Detection Algorithms:
+  1.It is mainly needed between Between two rectangles or between two circles
+   We use collision detection technique called SEPERATING AXIS THEOREM
+    SEPERATING AXIS THEOREM  is used to detect collision between convex polygons or Rectangles that are rotated but aren't axis aligned.
+  2. Point and circle
+  3. Point and square
+  4. Line and circle
+  5. Line and square/rectangles
+  6. Between two lines and so on
+   COMPLEX cases are convex and concave polygons. some tricks used for nthese are:
+   1. Detection by color
+   2. Projecting lines from a point and checking if the number of intersections btw that line and polygon is odd or even number 
+   Algorithms for detection of collisions:
+     1. BETWEEN RECTANGLES
+   <script>
+       var rect1 = {x: 5, y: 5, width: 50, height: 50};
+       var rect2 = {x: 20 y: 10, width: 10, height: 10};
+   
+
+   if (rect1.x > rect2.x + rect2.width &&
+       rect1.x + rect1.width < rect2.x &&
+       rect1.y > rect2.y + rect2.height &&
+       rect1.y + rect1.height < rect2.y
+       ){
+           // collision detected
+       } else {
+           // no collision
+       }
+   </script>
+   the above returns true if all cases are true
+   while,
+   <script>
+       var rect1 = {x: 5, y: 5, width: 50, height: 50};
+       var rect2 = {x: 20 y: 10, width: 10, height: 10};
+   
+
+   if (rect1.x > rect2.x + rect2.width ||
+       rect1.x + rect1.width < rect2.x ||
+       rect1.y > rect2.y + rect2.height ||
+       rect1.y + rect1.height < rect2.y
+       ){
+           // no collision
+       } else {
+           // collision detected
+       }
+   </script>
+   this code returns true if one of the conditions are true
+     2. BETWEEN CIRCLES
+     <script>
+        const circle1 = { x: 10, y: 10, radius: 300};
+        const circle2 = { x: 500, y: 500, radius: 150};
+
+        let dx = circle2.x - circle1.x;
+        let dy = circle2.y - circle1.y;
+        let distance = Math.sqrt(dx * dx + dy * dy);
+        let sumOfRadii = circle1.radius + circle2.radius;
+
+        if (distance < sumOfRadii) {
+               // circles collide
+        } else if (distance === sumOfRadii){
+                // circles are touching
+        } else if (distance < sumOfRadii){
+               // no collision
+        }
+
+        </script>
