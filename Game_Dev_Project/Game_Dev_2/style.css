@@ -1,0 +1,28 @@
+body {
+    background: black;
+}
+#container {
+    position: absolute;
+    width: 800px;
+    transform: translate(-50%, -50%);
+    top: 15%;
+    left: 50%;
+    font-size: 25px;
+}
+input {
+    min-height: 20%;
+}
+#canvas1 {
+    position: absolute;
+    min-width: 80%;
+    min-height: 30%;
+}
+#slider {
+    width: 100%;
+}
+p {
+    color: white;
+}
+p, input {
+    top: 0;
+}
