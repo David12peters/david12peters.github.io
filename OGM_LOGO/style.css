@@ -1,0 +1,35 @@
+body {
+    text-align: center;
+    
+}
+i {
+    font-size: 25px;
+}
+a {
+    text-decoration: none;
+}
+p {
+    width: 100%;
+    font-size: 35px;
+}
+audio {
+    visibility: hidden;
+}
+/*div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 5px solid white;
+    max-width: 100%;
+    max-height: 100%;
+}*/
+
+#fullscreenButton {
+    position: absolute;
+    font-size: 10px;
+    padding: 10px;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%);
+}
