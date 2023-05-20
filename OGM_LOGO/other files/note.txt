@@ -1,0 +1,3 @@
+To Complete this Project, I need to re-watch The Game Dec Video Again.
+I Need to Add Two Other Spritesheets For Torch And One
+I Will Add A Border Around The Canvas With Blue Background Color.
