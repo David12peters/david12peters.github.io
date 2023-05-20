@@ -1,0 +1,51 @@
+#canvas1 {
+    border: 6px solid black;
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    filter: blurr(0px);
+    -webkit-filter: blur(0px);
+    transform: translate(-50%, -50%);
+}
+select {
+    visibility: hidden;
+}
+#animations {
+    text-align: center;
+}
+#canvas2 {
+    border-radius: 80px;
+    border: transparent;
+    width: 200px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    filter: blurr(0px);
+    -webkit-filter: blur(0px);
+    transform: translate(-50%, -50%);
+}
+
+#canvas3 {
+    border: transparent;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    filter: blurr(2px);
+    -webkit-filter: blur(2px);
+    transform: translate(-50%, -50%);
+    background-color: blue;
+}
+#canvas1, #canvas3 {
+    border-radius: 50%;
+}
+#b-text {
+    bottom: 0%;
+}
+img {
+    display: none;
+}
