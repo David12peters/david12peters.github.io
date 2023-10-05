@@ -1,0 +1,21 @@
+* {
+    background-color: #00000013;
+    text-align: center;
+}
+
+header {
+    top: 0;
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    text-align: default;
+}
+
+div {
+    background-color: white;
+}
+
