@@ -1,0 +1,33 @@
+img {
+    max-width: 100%;
+    aspect-ratio: 25 / 10;
+    border-radius: 40px; 
+}
+body {
+    background: url(cover.png);
+}
+
+@media screen and (max-width: 768px) {
+a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+}
+
+@media screen and (min-width: 768px) {
+    li {
+    display: inline;
+    margin-right: 20px;
+}
+a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
