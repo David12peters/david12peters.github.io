@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance Sheet</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>
+          <span class="flex">
+            <span>DavcentWidgetCorp</span>
+            <span>Balance Sheet</span>
+          </span>
+        </h1>
+        <div id="years" aria-hidden="true">
+          <span class="year"><span id="ytext" ></span><span id="year1">2010</span></span>
+          <span class="year"><span id="year2">2020</span></span>
+          <span class="year"><span id="year3">2021</span></span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <caption>Assets</caption>
+            <thead>
+              <tr>
+                <td></td>
+                <span id="button"><button onclick="edit()" id="edit">Edit</button></span>
+                <th><span class="sr-only year"><span id="year1">2019</span></span></th>
+                <th><span class="sr-only year"><span id="year2">2020</span></span></th>
+                <th class="current"><span class="sr-only year"><span id="year3">2021</span></span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="data">
+                <th>Cash <span class="description">This is the cash we currently have on hand.</span></th>
+                <td>$<span id="cash1">25</span></td>
+                <td>$<span id="cash2">30</span></td>
+                <td class="current">$<span id="cash3">28</span></td>
+              </tr>
+              <tr class="data">
+                <th>Checking <span class="description">Our primary transactional account.</span></th>
+                <td>$<span id="check1">54</span></td>
+                <td>$<span id="check2">56</span></td>
+                <td class="current">$<span id="check3">53</span></td>
+              </tr>
+              <tr class="data">
+                <th>Savings <span class="description">Funds set aside for emergencies.</span></th>
+                <td>$<span id="save1">500</span></td>
+                <td>$<span id="save2">650</span></td>
+                <td class="current">$<span id="save3">728</span></td>
+              </tr>
+              <tr class="total">
+                <th>Total <span class="sr-only">Assets</span></th>
+                <td>$<span id="assets1">579</td>
+                <td>$<span id="assets2">736</td>
+                <td class="current">$<span id="assets3">809</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <table>
+            <caption>Liabilities</caption>
+            <thead>
+              <tr>
+              <td></td>
+              <th><span class="sr-only"><span id="year1">2019</span></span></th>
+              <th><span class="sr-only"><span id="year2">2020</span></span></th>
+              <th><span class="sr-only"><span id="year3">2021</span></span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="data">
+                <th>Loans <span class="description">The outstanding balance on our startup loan.</span></th>
+                <td>$<span id="loans1">500</span></td>
+                <td>$<span id="loans2">250</span></td>
+                <td class="current">$<span id="loans3">0</span></td>
+              </tr>
+              <tr class="data">
+                <th>Expenses <span class="description">Annual anticipated expenses, such as payroll.</span></th>
+                <td>$<span id="expense1">200</td>
+                <td>$<span id="expense2">300</td>
+                <td class="current">$<span id="expense3">400</span></td>
+              </tr>
+              <tr class="data">
+                <th>Credit <span class="description">The outstanding balance on our credit card.</span></th>
+               <td>$<span id="credit1">50</td>
+                <td>$<span id="credit2">50</td>
+                <td class="current">$<span id="credit3">75</td>
+              </tr>
+              <tr class="total">
+                <th>Total <span class="sr-only">Liabilities</span></th>
+                <td>$<span id="liability1">750</td>
+                <td>$<span id="liability2">600</td>
+                <td class="current"><span id="liability3">475</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <table>
+            <caption>Net Worth</caption>
+            <thead>
+              <tr>
+              <td></td>
+              <th><span class="sr-only"><span id="year1">2019</span></th>
+              <th><span class="sr-only"><span id="year2">2020</span></span></th>
+              <th><span class="sr-only"><span id="year3">2021</span></span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="total">
+                <th>Total <span class="sr-only">Net Worth</span></th>
+                <td>$<span id="worth1">-171</span></td>
+                <td>$<span id="worth2">136</span></td>
+                <td class="current">$<span id="worth3">334</span></td>
+              </tr>
+            </tbody>
+          </table>
+          
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
