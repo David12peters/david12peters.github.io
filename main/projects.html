@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!--CSS Styles -->
+    <style>
+        
+        /* Reset some default browser styles */
+ @media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Set a default font for better compatibility */
+    text-align: center;
+}
+
+
+.top-left-image { 
+position: fixed; /* Position the image absolutely */ 
+top: 25px; /* Adjust the top position as needed */ 
+left: 0px; /* Adjust the left position as needed */ 
+width: 100px; /* Set your preferred width */ height: auto; /* Maintain aspect ratio */
+ }
+
+#about {
+    margin-top: 100px; 
+}
+
+#logo {
+ width: max(30px, 16vw);
+background-color: #0a0a23;
+  aspect-ratio: 60 / 45;
+padding: 0.1rem;
+max-height: 90%;
+border-radius: 30px; 
+margin-left: 1rem;
+}
+
+/* Style the navigation bar */
+nav {
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+.menu-exit, .menu-toggle {
+        display: none; 
+}
+
+#android {
+    display: none;
+}
+iframe {
+    height: 300px; 
+}
+
+}
+/* Responsive design using media queries */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the left */
+    }
+    
+    
+#desktop {
+    display: none;
+}
+    #largeul {
+        display: none; /* Hide the menu items by default on small screens */
+        width: 100%; /* Take up the full width */
+        margin-top: 10px; /* Add some space below the logo */
+    }
+
+    li {
+        margin: 10px 0; /* Add spacing between stacked menu items */
+    }
+
+    .menu-toggle, .menu-exit {
+        display: block; /* Show the menu toggle button */
+        font-size: 24px;
+        cursor: pointer;
+    }
+   
+    
+}
+.info-panel {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -300px; /* Off-screen to the right */
+    background-color: #333;
+    color: #fff;
+    width: 300px;
+    height: 100%;
+    padding: 20px;
+    transition: right 0.3s; /* Add a transition for smooth sliding effect */
+    text-align: left;     
+}
+
+header {
+  width: 100%;
+	height: 100px;
+	background-color: #1b1b32;
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 0;
+  background-color: #333;
+  color: #fff;
+}
+#nav-link {
+    margin: 6px; 
+    text-align: center; 
+}
+.menu-exit {
+    text-align: left; 
+}
+#home {
+            background-color: #35424a;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 50px; 
+            width: 100%;
+        }
+        
+       
+.sec-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .services {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+
+img {
+    height: auto;
+    max-width: 100%;
+    aspect-ratio: 25 / 20;
+    border-radius: 40px; 
+}
+
+
+footer {
+            background-color: #35424a;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+label {
+    margin: 60px; 
+}
+header nav div ul li a {
+    color: #fff; 
+}
+select {
+    border: 0px; 
+    background-color: #fff;
+    text-align: right;
+}
+#screenshot {
+    aspect-ratio: 10 / 25;
+    height: 300px; 
+    border-radius: 4px; 
+}
+.contact {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 2rem; 
+  }
+  i {
+      margin: 5px; 
+  }
+.fa-whatsapp {
+    margin-left: 1px; 
+}
+
+
+/* Styles for the pop-up ad container */
+.popup, .popup-second {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.popup-content, .popup-content-second {
+    position: absolute;
+    top: 50%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+/* Style for the close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+/* Style for Font Awesome-like icon */
+.fa-like-icon {
+  width: 24px; /* Set your preferred width */
+  height: 24px; /* Set your preferred height */
+  display: inline-block;
+  margin-right: 8px; /* Adjust margin as needed */
+  vertical-align: middle; /* Align with text vertically */
+  /* Add more styles based on your design preferences */
+}
+
+
+/*Styling the contact section */
+.contact {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 2rem; 
+  }
+  i {
+      margin: 5px; 
+  }
+.fa-whatsapp {
+    margin-left: 1px; 
+    color: green;
+}
+
+.fa-instagram, .fa-youtube {
+    color: red;
+}
+
+
+.contact a {
+    font-size: 2rem; 
+}
+
+#check-btn {
+  border-radius: 20px;
+}           
+
+/*style ends*/
+.CV-img {
+    height: 300px; 
+    border-radius: 20px; 
+}
+
+        
+        
+    </style>
+<link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+
+<!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Screenshot_2022_1116_193338.png"
+    />
+
+
+<!-- Animate CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    
+            <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const infoPanel = document.getElementById("info-panel");
+        const menuToggle = document.querySelector(".menu-toggle");
+        const menuExit = document.querySelector(".menu-exit");
+        
+      //  const content = document.querySelector(".content");
+
+
+
+        // Function to toggle the info panel
+        function toggleInfoPanel() {    
+          infoPanel.style.display = "block" 
+           infoPanel.style.right = "-300px";
+            infoPanel.style.right = "-200px";
+        }                                   
+        
+        
+        
+        function exit(){
+            infoPanel.style.display = "none"
+        }
+        
+        // Add click event listener to the menu toggle button
+        menuToggle.addEventListener("click", toggleInfoPanel);
+       // content.addEventListener("click", toggleInfoPanel);
+        menuExit.addEventListener("click", exit);
+        
+        
+    });    
+   
+</script>
+    
+    
+    <title>David Peters | Front-end Web Developer</title>
+  </head>
+
+  <body>
+    <header>
+        <img src="cover.jpg" id="logo" alt="myPic">
+        <h1>David Peters</h1>
+    <!-- Navbar -->
+
+<nav>
+       <div class="container">
+            <div class="menu-toggle">&#9776;</div> <!-- Add a menu toggle button for small screens -->
+            <ul id="largeul">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div id="info-panel" class="info-panel">
+    
+    <div class="menu-exit">&times;</div>
+    <ul>
+                <li id="nav-link" class="about"><a href="#about"> <i class="fa fa-info-circle"></i>&nbsp; About</a></li><hr>
+                <li id="nav-link" class="skills"><a href="#skills"> <i class="fas fa-code"></i> Skills</a></li><hr>
+                <li id="nav-link" class="projects"><a href="#projects"><i class="fas fa-laptop-code"></i> Projects</a></li><hr>
+                <li id="nav-link" class="contacts"><a href="#contact"><i class="fas fa-address-card"></i> Contact</a></li><hr>
+                
+                
+               <li> <a id="desktopBtn"><i class="fas fa-download"></i>Download Resume</a></li></hr>
+                 
+            </ul>
+</div>
+
+
+</nav>
+</header>
+
+
+<!-- Hero Section -->
+<section id="about">
+<div>
+<img src="cover.jpg" id="logo" class="top-left-image" alt="myPic">
+
+</div>
+
+
+    <h1>About me</h1>
+<div id="introduction">
+    Hi,  It's me David Peters. I'm a web developer, web designer inclusive. I design responsive web applications and web apps. I am very good at what I do, I am very open minded, I am currently open to work. 
+</div>
+</section>
+
+<!-- More about -->
+<section id="experience">
+    <h3>Experience</h3>
+   <p> I have worked with companies like:
+    <a href="">NIKE-OBI-TECH</a><img src="Nike-obi.jpg" alt="" class="fa-like-icon">
+    <a href="">DAVCENT</a><img src="profile.png" alt="" class="fa-like-icon">
+    and many other companies like these, I am very good at multitasking. I assure you that working with you will be enjoyable and, my skills are highly exceptional.
+</p>
+</section>
+    <!-- Skills section -->
+    <section id="skills">
+    <h3>Skills</h3>
+   <h4>Web design</h4>
+   
+    <ul>
+        <li><a href="">HTML <i class="fab fa-html5"></i></a></li>
+        <li><a href="">CSS <i class="fab fa-css3-alt"></i></a></li>
+        <li><a href="">BOOTSTRAP <i class="fab fa-bootstrap"></i></a></li>
+        <li><a href="">SASS <i class="fab fa-sass"></i></a></li>
+    </ul>
+    
+      <h4>Front-end development</h4>
+   
+    <ul>
+        <li><a href="">Basic-JS <i class="fab fa-js"></i></a></li>
+        <li><a href="">jQuery <i class="fab fa-js-square"></i></a></li>
+        <li><a href="">React <i class="fab fa-react"></i></a></li>
+        <li><a href="">Node-JS <i class="fab fa-node-js"></i></a></li>
+    </ul>
+    
+    </section>
+<!-- Projects section -->
+
+<section id="projects">
+    <h3>Projects</h3>
+    
+    
+    <br>
+               <fieldset>
+               <!-- HTML and CSS Projects-->
+               <legend>HTML/CSS</legend>
+               
+               <ol>
+                 <li>Photo Album</li>
+                <div>
+                   <button onclick="HCassignbtn1()" id="check-btn">Check</button>
+               <a href="../photo_album/index.html">Visit</a>
+               </div>
+               <li>Cafe Menu</li>
+               <div>
+                   <button onclick="HCassignbtn2()" id="check-btn">Check</button>
+               <a href='../Cafe_menu/index.html'>Visit</a>
+               </div>
+             <li>Color Markers</li>
+               <div>
+                   <button onclick="HCassignbtn3()" id="check-btn">Check</button>
+               <a href='../Color_markers/index.html'>Visit</a>
+               </div>
+               <li>Registration Form</li>
+               <div>
+                  <button onclick="HCassignbtn4()" id="check-btn">Check</button>
+               <a href='../Registration_form/index.html'>Visit</a>
+               </div>
+               
+               <li>Rothko Painting</li>                <div>
+                   <button onclick="HCassignbtn5()" id="check-btn">Check</button>
+               <a href='../Rothko_Painting/index.html'>Visit</a>
+               </div>
+               <li>Photo Gallery</li>
+               <div>
+                  <button onclick="HCassignbtn6()" id="check-btn">Check</button>
+               <a href='../Photo_Gallery/index.html'>Visit</a>
+               </div>
+               
+               <li>Nutrition Label</li>
+               <div>
+                   <button onclick="HCassignbtn7()" id="check-btn">Check</button>
+               <a href='../Nutrition_Label/index.html'>Visit</a>
+               </div>
+               <li>Balance Sheet</li>
+               <div>
+                   <button onclick="HCassignbtn8()" id="check-btn">Check</button>
+                                                           <a href='../Balancesheet/index.html'>Visit</a>
+               </div>
+                   
+               <li>Accessibility Quiz</li>
+               <div>
+                   <button onclick="HCassignbtn9()" id="check-btn">Check</button>
+               <a href='../Accessibility_quiz/index.html'>Visit</a>
+               </div>
+               
+             
+
+                   
+                <li>AT-Services</li>
+                   <div>
+                   <button onclick="HCassignbtn10()" id="check-btn">Check</button>
+               <a href='../AT-Services/index.html'>Visit</a>
+               </div>
+                   <li>Ferris Wheel</li>
+                   <div>
+                   <button onclick="HCassignbtn11()" id="check-btn">Check</button>
+            <a href='../Ferris_wheel/index.html'>Visit</a>
+               </div>
+                  <!-- <li>A Cat photo App</li>
+                   <button onclick="HCassignbtn15()" id="check-btn">Check</button>
+               <button onclick="HCreturnbtn15()" id="check-btn">Return</button>
+               <p id="HCparagraph15"></p><a href='Cafe menu pro 2.html'>Visit</a>-->
+               </div>
+               </ol>
+               </fieldset>
+               <fieldset>
+                   <!--<i>JAVASCRIPT</i>-->
+        <legend>JAVASCRIPT</legend>
+                   <ol>
+                   <li>Exam-Test</li>
+                   <div>
+                      <button onclick="JSassignbtn1()" id="check-btn">Check</button>
+       <a href='../GNS_103&105_test/exam.html'>Visit</a>
+                  </div>
+
+                    <p>GAME DEVELOPMENT</p>
+  <li>Game Development 1</li>
+                    
+                  <div>
+                      <button onclick="JSassignbtn2()" id="check-btn">Check</button>
+                  <a href='../Game_Dev_Project/Game_Dev_1/index.html'>Visit</a>
+                  </div>
+                
+                  <li>Game Development 2</li>
+                  <div>
+                      <button onclick="JSassignbtn3()" id="check-btn">Check</button>
+                  <a href='../Game_Dev_Project/Game_Dev_2/index.html'>Visit</a>
+                  </div>
+                  
+                  <li>Game Development 3</li>
+                  <br><li>GD 3A</li>
+                  <div>
+                     <button onclick="JSassignbtn4()" id="check-btn">Check</button>
+                  <a href='../Game_Dev_Project/Game_Dev_3/GD 3A/index.html'>Visit</a>
+                  </div>
+                  
+                  <li>3B</li>                <div>
+                      <button onclick="JSassignbtn5()" id="check-btn">Check</button>
+                  <a href='../Game_Dev_Project/Game_Dev_3/GD 3B/index.html'>Visit</a>
+                  </div>
+                  
+                  <li>3C</li>
+                  <div>
+                     <button onclick="JSassignbtn6()" id="check-btn">Check</button>
+                  <a href='../Game_Dev_Project/Game_Dev_3/GD 3C/index.html'>Visit</a>
+                  </div>
+                  <li>3D</li>
+                  <div>
+                      <button onclick="JSassignbtn7()" id="check-btn">Check</button>
+                  <a href='../Game_Dev_Project/Game_Dev_3/GD 3D/index.html'>Visit</a>
+                  </div>
+                  
+                  <li>Game Dev 4</li>
+                  <div>
+                      <button onclick="JSassignbtn8()" id="check-btn">Check</button>
+                  <a href='../Game_Dev_Project/Game_Dev_4/index.html'>Visit</a>
+                  </div>
+                      <li>Game Dev 5</li>          
+                  <div>
+                      <button onclick="JSassignbtn9()" id="check-btn">Check</button>
+                  <a href='../Game_Dev_Project/Game_Dev_5/index.html'>Visit</a>
+                  </div>
+                  <li>Game Dev 6</li>
+                  <div>
+                      <button onclick="JSassignbtn10()" id="check-btn">Check</button>
+                  <a href='../Game_Dev_Project/Game_Dev_6/index.html'>Visit</a>
+                  </div>
+                  <li>Game Dev 7</li>
+                      <div>
+                      <button onclick="JSassignbtn11()" id="check-btn">Check</button>
+                  <a href='../Game_Dev_Project/Game_Dev_7/index.html'>Visit</a>
+                  </div>
+                  <li>Game Dev 8</li>
+                      <div>
+                      <button onclick="JSassignbtn12()" id="check-btn">Check</button>
+                  <a href='../Game_Dev_Project/Game_Dev_8/index.html'>Visit</a>
+                  </div>
+                  
+                 <li>OGM LOGO</li>
+                      <div>
+                      <button onclick="JSassignbtn13()" id="check-btn">Check</button>
+                  <a href='../OGM_LOGO/index.html'>Visit</a>
+                 </div>
+               
+               </fieldset>
+    
+    
+    
+</section>
+<!-- Contact section -->
+
+
+<div class="contact">
+            
+            
+        
+            <a href="https://wa.me/08087846847/"><i class="fab fa-whatsapp"></i></a>
+          
+          <a href="https://www.facebook.com/profile.php?id=61551330303945&mibextid=ZbWKwL">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com/davidpeters874/">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com/davidpeters1098/">
+            <i class="fab fa-instagram"></i>
+          </a>
+    
+          <a href="https://www.youtube.com/@Davcent">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+    <!-- Social accounts - Fixed to the right -->
+    <!-- Footer section -->  
+    
+    
+    
+     <section>
+           <!-- CV Download container -->
+           <div id="popupAd" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closeAdButton">&times;</span>
+            
+            
+            
+          <img src="CV.png" alt="CV image" class="CV-img">
+    <iframe src="CV.pdf" type="pdf" width="100%" height="auto"></iframe>
+        </div>
+    </div>
+       </section>
+       
+       
+       <section>
+           <!-- Project Display container -->
+           <div id="popupAd-second" class="popup-second">
+        <div class="popup-content-second" >
+            <span class="close" id="closeProjectButton">&times;</span>
+            
+           <iframe src="" class="CV-img" id="CV"></iframe>
+    <!-- <iframe src="" class="CV-img"></iframe>
+     -->
+    <a href="" class="link">Go-to: <i class="fas fa-arrow-right"></i></a>
+    
+        </div>
+    </div>
+       </section>
+       
+  <!-- Website scripts -->
+    
+        <script>
+            
+            
+           
+           const project = ["", "../photo_album/index.html", "../Cafe_menu/index.html", "../Color_markers/index.html", "../Registration_form/index.html", "../Rothko_Painting/index.html", "../Photo_Gallery/index.html", "../Nutrition_Label/index.html", "../Balancesheet/index.html", "../Accessibility_quiz/index.html", "../AT-Services/index.html", "../Ferris_wheel/index.html"
+           ]
+           
+           const jsProject = ["", "../GNS_103&105_test/exam.html", "../Game_Dev_Project/Game_Dev_1/index.html", "../Game_Dev_Project/Game_Dev_2/index.html", "../Game_Dev_Project/Game_Dev_3/GD 3A/index.html", "../Game_Dev_Project/Game_Dev_3/GD 3B/index.html", "../Game_Dev_Project/Game_Dev_3/GD 3C/index.html", "../Game_Dev_Project/Game_Dev_3/GD 3D/index.html", "../Game_Dev_Project/Game_Dev_4/index.html", "../Game_Dev_Project/Game_Dev_5/index.html", "../Game_Dev_Project/Game_Dev_6/index.html", "../Game_Dev_Project/Game_Dev_7/index.html", "../Game_Dev_Project/Game_Dev_8/index.html", "../OGM_LOGO/index.html"]
+           
+           
+           
+           iframeProp = document.querySelector("#CV")
+           link = document.querySelector(".link")
+          pop = document.querySelector(".popup-second")
+           
+           function HCassignbtn1() {
+           pop.style.display = 'block'
+           iframeProp.src = project[1]
+           link.href = project[1]
+       }
+       
+       function HCassignbtn2() {
+           pop.style.display = 'block'
+           iframeProp.src = project[2]
+           link.href = project[2]
+       }
+       
+       function HCassignbtn3() {
+           pop.style.display = 'block'
+           iframeProp.src = project[3]
+           link.href = project[3]
+       }
+       
+       function HCassignbtn4() {
+           pop.style.display = 'block'
+           iframeProp.src = project[4]
+           link.href = project[4]
+       }
+       
+       function HCassignbtn5() {
+           pop.style.display = 'block'
+           iframeProp.src = project[5]
+           link.href = project[5]
+       }
+       
+       function HCassignbtn6() {
+           pop.style.display = 'block'
+           iframeProp.src = project[6]
+           link.href = project[6]
+       }
+           
+        function HCassignbtn7() {
+           pop.style.display = 'block'
+           iframeProp.src = project[7]
+           link.href = project[7]
+       }  
+           
+       function HCassignbtn8() {
+           pop.style.display = 'block'
+           iframeProp.src = project[8]
+           link.href = project[8]
+       }    
+           
+           
+       function HCassignbtn9() {
+           pop.style.display = 'block'
+           iframeProp.src = project[9]
+           link.href = project[9]
+       }    
+           
+      function HCassignbtn10() {
+           pop.style.display = 'block'
+           iframeProp.src = project[10]
+           link.href = project[10]
+       }     
+           
+       function HCassignbtn11() {
+           pop.style.display = 'block'
+           iframeProp.src = project[11]
+           link.href = project[11]
+       }    
+       /*
+        function HCassignbtn12() {
+           pop.style.display = 'block'
+           iframeProp.src = project[12]
+           link.href = project[12]
+       }    
+           */
+           
+           //JS Functions 
+           
+           function JSassignbtn1() {
+           pop.style.display = 'block'
+           iframeProp.src = jsProject[1]
+           link.href = jsProject[1]
+       }
+       
+       function JSassignbtn2() {
+           pop.style.display = 'block'
+           iframeProp.src = jsProject[2]
+           link.href = jsProject[2]
+       }
+       
+       function JSassignbtn3() {
+           pop.style.display = 'block'
+           iframeProp.src = jsProject[3]
+           link.href = jsProject[3]
+       }
+       
+       function JSassignbtn4() {
+           pop.style.display = 'block'
+           iframeProp.src = jsProject[4]
+           link.href = jsProject[4]
+       }
+           
+      function JSassignbtn5() {
+           pop.style.display = 'block'
+           iframeProp.src = jsProject[5]
+           link.href = jsProject[5]
+       }     
+           
+      function JSassignbtn6() {
+           pop.style.display = 'block'
+           iframeProp.src = jsProject[6]
+           link.href = jsProject[6]
+       }     
+           
+       function JSassignbtn7() {
+           pop.style.display = 'block'
+           iframeProp.src = jsProject[7]
+           link.href = jsProject[7]
+       }    
+           
+       function JSassignbtn8() {
+           pop.style.display = 'block'
+           iframeProp.src = jsProject[8]
+           link.href = jsProject[8]
+       }
+       
+       function JSassignbtn9() {
+           pop.style.display = 'block'
+           iframeProp.src = jsProject[9]
+           link.href = jsProject[9]
+       }
+       
+       function JSassignbtn10() {
+           pop.style.display = 'block'
+           iframeProp.src = jsProject[10]
+           link.href = jsProject[10]
+       }
+       
+       function JSassignbtn11() {
+           pop.style.display = 'block'
+           iframeProp.src = jsProject[11]
+           link.href = jsProject[11]
+       }
+           
+       function JSassignbtn12() {
+           pop.style.display = 'block'
+           iframeProp.src = jsProject[12]
+           link.href = jsProject[12]
+       }    
+           
+       function JSassignbtn13() {
+           pop.style.display = 'block'
+           iframeProp.src = jsProject[13]
+           link.href = jsProject[13]
+       }    
+           /*
+        function JSassignbtn14() {
+           pop.style.display = 'block'
+           iframeProp.src = jsProject[14]
+           link.href = jsProject[14]
+       }
+       
+       function JSassignbtn15() {
+           pop.style.display = 'block'
+           iframeProp.src = jsProject[15]
+           link.href = jsProject[15]
+       }
+       
+       function JSassignbtn16() {
+           pop.style.display = 'block'
+           iframeProp.src = jsProject[16]
+           link.href = jsProject[16]
+       }
+          */
+           
+           const infoPanel = document.getElementById("info-panel");
+          
+    
+    
+    const about = document.querySelector(".about");
+           about.onclick = () => {
+       infoPanel.style.display = "none"
+    };
+    
+    const skills= document.querySelector(".skills");
+           skills.onclick = () => {
+       infoPanel.style.display = "none"
+    };
+    
+    const projects = document.querySelector(".projects");
+           projects.onclick = () => {
+       infoPanel.style.display = "none"
+    };
+    
+           const contact = document.querySelector(".contacts");
+           contact.onclick = () => {
+       infoPanel.style.display = "none"
+    };
+           
+           
+       //  Desktop site function or ADS
+           document.addEventListener("DOMContentLoaded", function() {
+    const desktopBtn = document.getElementById("desktopBtn");
+    const popupAd = document.getElementById("popupAd");
+    const closeAdButton = document.getElementById("closeAdButton");
+
+const popupAdSecond = document.getElementById("popupAd-second");
+    const closeProjectButton = document.getElementById("closeProjectButton");
+
+    // Show the pop-up ad when the button is clicked
+    desktopBtn.addEventListener("click", function() {
+        popupAd.style.display = "block";
+    });
+
+    // Close the pop-up ad when the close button is clicked
+    closeAdButton.addEventListener("click", function() {
+        popupAd.style.display = "none";
+    });  
+
+closeProjectButton.addEventListener("click", function() {
+        popupAdSecond.style.display = "none";
+    });
+});    
+
+        </script>
+
+<!-- Ion icons scripts -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
+
