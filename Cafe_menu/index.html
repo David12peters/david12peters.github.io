@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html id="main" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JNL Menu</title>
+
+<style>
+    body {
+  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-size: 30px;
+  text-align: center; 
+}
+
+.established {
+  font-style: italic;
+}
+
+h1, h2, p {
+  text-align: center;
+}
+
+.menu {
+  width: 80%;
+  background-color: burlywood;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  max-width: 500px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -25px;
+}
+
+hr {
+  height: 2px;
+  background-color: brown;
+  border-color: brown;
+}
+
+.bottom-line {
+  margin-top: 25px;
+}
+
+h1, h2 {
+  font-family: Impact, serif;
+}
+
+.item p {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.flavor, .dessert {
+  text-align: left;
+  width: 75%;
+}
+
+.price {
+  text-align: right;
+  width: 25%;
+}
+
+/* FOOTER */
+
+footer {
+  font-size: 14px;
+}
+
+.address {
+  margin-bottom: 5px;
+}
+
+a {
+  color: black;
+}
+ a:visited {
+  color: black;
+}
+
+a:hover {
+  color: brown;
+}
+
+a:active {
+  color: brown;
+}
+
+img {
+ width: max(90px, 16vw);
+background-color: brown;
+  aspect-ratio: 86 / 60;
+padding: 0.2rem;
+max-height: 90%;
+}
+
+</style>
+  </head>
+  <body>
+    <div class="menu">
+      <header>
+        <h1>JNL MENU</h1>
+        <p class="established">Est. 2023</p>
+      </header>
+      <hr>
+      <main>
+        <section>
+          <h4>Catfish</h4>
+          <img src="catfish.jpg" alt="fish icon"/>
+          <article class="item">
+            <p class="flavor">Life</p><p class="price">3.00</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Killed</p><p class="price">3.75</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Roasted</p><p class="price">3.50</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Cooked</p><p class="price">4.00</p>
+          </article>
+
+          </article>
+        </section>
+        <section>
+          <h4>Chicken</h4>
+          <img src="chicken.jpg" alt="chicken icon"/>
+          <article class="item">
+            <p class="dessert">Life</p><p class="price">1.50</p>
+          </article>
+          <article class="item">
+            <p class="dessert">Killed and Defetheared</p><p class="price">2.75</p>
+          </article>
+          <article class="item">
+            <p class="dessert">Cooked</p><p class="price">3.00</p>
+          </article>
+
+          </article>
+        </section>
+        
+        <section>
+          <h4>Small catfish</h4>
+          <img src="growing.jpg" alt="fish icon"/>
+          <article class="item">
+            <p class="flavor">Table Size</p><p class="price">3.00</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Fingerlings</p><p class="price">3.75</p>
+          </article>
+
+        </section>
+        
+        <section>
+          <h4>Livestock</h4>
+          <img src="livestock.jpg" alt="livestock icon"/>
+          <article class="item">
+            <p class="dessert">Goats</p><p class="price">1.50</p>
+          </article>
+          <article class="item">
+            <p class="dessert">Sheeps</p><p class="price">2.75</p>
+        </section>
+      </main>
+      <hr class="bottom-line">
+      <footer>
+        <p>
+          <a href="https://david12peters.github.io" target="_blank">Visit our website</a>
+        </p>
+        <p class="address" ><a href="tel:08087846847" style="text-decoration: none;">Davcent </a><code onclick="last()">Drive</code></p>
+      </footer>
+    </div>
+    <script>
+        const main = document.getElementById("main");
+       function last(){
+        print(main);
+        }
+    </script>
+  </body>
+</html>
+
