@@ -1,6 +1,6 @@
 # david12peters.github.io
 
-Hi there everyone. This is David Oluwaseun Peters repository. My repository is man about my projects 
+Hi there everyone. This is David Oluwaseun Peters repository. My repository is mainly about my projects 
 and also for an online store, contains a web builder website 
 with flutterwave payment. I'm also working on other projects
 It also contains my Portfolio projects.html, describing all my 
