@@ -1,4 +1,4 @@
-# david12peters.github.io
+# https://david12peters.github.io
 
 Hi there everyone. This is David Oluwaseun Peters repository. My repository is mainly about my projects 
 and also for an online store, contains a web builder website 
