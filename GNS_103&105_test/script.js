@@ -339,7 +339,7 @@ function otherOptions(){
 
 // Set the date we're counting down to
 function countdownTimeStart(){
-var countDownDate = new Date(`Jan 27, 2025 ${stopTime.value}`).getTime();
+var countDownDate = new Date(`Jan 27, 2028 ${stopTime.value}`).getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
