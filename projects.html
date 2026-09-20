@@ -6,34 +6,38 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>David Peters — Front-end Web Developer</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+  >
 
   <meta name="color-scheme" content="light dark">
 
   <style>
     :root{
-      --bg: #0f1724;
-      --card: #0f1724;
-      --muted: #98a0b3;
-      --accent: #4f9ef7;
-      --accent-2: #7cf2c7;
-      --glass: rgba(255,255,255,0.04);
-      --surface: #0b1220;
-      --white: #ffffff;
-      --radius: 14px;
-      --max-width: 1100px;
-      --shadow: 0 6px 20px rgba(2,6,23,0.6);
+      --bg:#0f1724;
+      --card:#0f1724;
+      --muted:#98a0b3;
+      --accent:#4f9ef7;
+      --accent-2:#7cf2c7;
+      --glass:rgba(255,255,255,0.04);
+      --surface:#0b1220;
+      --white:#ffffff;
+      --radius:14px;
+      --max-width:1100px;
+      --shadow:0 6px 20px rgba(2,6,23,0.6);
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      * {
-        animation: none !important;
-        transition: none !important;
-        scroll-behavior: auto !important;
+    @media (prefers-reduced-motion:reduce){
+      *{
+        animation:none !important;
+        transition:none !important;
+        scroll-behavior:auto !important;
       }
     }
 
@@ -46,14 +50,41 @@
       height:100%;
     }
 
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
       margin:0;
-      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:linear-gradient(180deg,#071025 0%, #0b1320 100%);
+      font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+      background:linear-gradient(
+        180deg,
+        #071025 0%,
+        #0b1320 100%
+      );
       color:var(--white);
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
       line-height:1.45;
+    }
+
+    a{
+      color:inherit;
+    }
+
+    button,
+    input,
+    textarea,
+    select{
+      font:inherit;
     }
 
     .wrap{
@@ -64,6 +95,10 @@
       flex-direction:column;
       gap:28px;
     }
+
+    /* ==========================================================
+       HEADER
+       ========================================================== */
 
     header.site-header{
       display:flex;
@@ -81,12 +116,15 @@
       position:sticky;
       top:18px;
       z-index:40;
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
     }
 
     .brand{
       display:flex;
       align-items:center;
       gap:12px;
+      min-width:0;
     }
 
     .brand img{
@@ -96,6 +134,7 @@
       border-radius:12px;
       border:2px solid rgba(255,255,255,0.06);
       background:var(--glass);
+      flex-shrink:0;
     }
 
     .brand h1{
@@ -108,6 +147,8 @@
       display:flex;
       gap:10px;
       align-items:center;
+      flex-wrap:wrap;
+      justify-content:flex-end;
     }
 
     .nav-link{
@@ -116,13 +157,58 @@
       font-weight:600;
       padding:8px 12px;
       border-radius:8px;
-      transition:background .18s, transform .12s;
+      transition:
+        background .18s,
+        transform .12s;
     }
 
     .nav-link:hover{
       background:rgba(255,255,255,0.03);
       transform:translateY(-2px);
     }
+
+    /* ==========================================================
+       BUTTONS
+       ========================================================== */
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      background:var(--accent);
+      color:#012;
+      font-weight:700;
+      padding:10px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      border:none;
+      cursor:pointer;
+      transition:
+        transform .15s ease,
+        opacity .15s ease,
+        background .15s ease;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+      opacity:.95;
+    }
+
+    .btn.secondary{
+      background:transparent;
+      color:var(--white);
+      border:1px solid rgba(255,255,255,0.08);
+      font-weight:600;
+    }
+
+    .btn.secondary:hover{
+      background:rgba(255,255,255,0.04);
+    }
+
+    /* ==========================================================
+       HERO
+       ========================================================== */
 
     .hero{
       display:grid;
@@ -158,29 +244,12 @@
       gap:12px;
       align-items:center;
       margin-top:14px;
+      flex-wrap:wrap;
     }
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      background:var(--accent);
-      color:#012;
-      font-weight:700;
-      padding:10px 14px;
-      border-radius:10px;
-      text-decoration:none;
-      border:none;
-      cursor:pointer;
-    }
-
-    .btn.secondary{
-      background:transparent;
-      color:var(--white);
-      border:1px solid rgba(255,255,255,0.06);
-      font-weight:600;
-    }
+    /* ==========================================================
+       PROFILE
+       ========================================================== */
 
     .profile-card{
       background:linear-gradient(
@@ -212,12 +281,17 @@
 
     .meta-item{
       text-align:center;
+      flex:1;
     }
 
     .meta-item strong{
       display:block;
       font-size:18px;
     }
+
+    /* ==========================================================
+       SECTIONS
+       ========================================================== */
 
     section.card{
       background:linear-gradient(
@@ -242,6 +316,23 @@
       font-size:16px;
     }
 
+    /* ==========================================================
+       SKILLS
+       ========================================================== */
+
+    .skill-category{
+      margin-top:18px;
+    }
+
+    .skill-category:first-child{
+      margin-top:12px;
+    }
+
+    .skill-category h4{
+      margin:0 0 8px 0;
+      font-size:14px;
+    }
+
     .skills-grid{
       display:flex;
       flex-wrap:wrap;
@@ -263,17 +354,39 @@
       gap:8px;
       align-items:center;
       border:1px solid rgba(255,255,255,0.03);
+      transition:
+        transform .15s ease,
+        background .15s ease;
+    }
+
+    .skill:hover{
+      transform:translateY(-3px);
+      background:rgba(255,255,255,0.04);
     }
 
     .skill i{
       font-size:18px;
-      opacity:0.95;
+      opacity:.95;
+      width:20px;
+      text-align:center;
     }
+
+    .skill-badge{
+      font-weight:700;
+      font-size:15px;
+      width:20px;
+      text-align:center;
+    }
+
+    /* ==========================================================
+       PROJECTS
+       ========================================================== */
 
     .projects-grid{
       margin-top:14px;
       display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
       gap:14px;
     }
 
@@ -283,19 +396,23 @@
         rgba(255,255,255,0.02),
         rgba(255,255,255,0.01)
       );
-      padding:12px;
+      padding:14px;
       border-radius:12px;
       display:flex;
       flex-direction:column;
       gap:10px;
-      min-height:120px;
+      min-height:145px;
       border:1px solid rgba(255,255,255,0.03);
-      transition:transform .12s, box-shadow .12s;
+      transition:
+        transform .12s,
+        box-shadow .12s,
+        border-color .12s;
     }
 
     .project-card:hover{
       transform:translateY(-6px);
       box-shadow:0 10px 30px rgba(3,8,23,0.6);
+      border-color:rgba(79,158,247,.2);
     }
 
     .project-card .title{
@@ -306,6 +423,7 @@
     .project-card .meta{
       color:var(--muted);
       font-size:13px;
+      min-height:38px;
     }
 
     .project-card .actions{
@@ -315,11 +433,30 @@
       flex-wrap:wrap;
     }
 
+    .project-card .actions .btn{
+      flex:1;
+      min-width:90px;
+    }
+
+    .project-card.featured{
+      border-color:rgba(79,158,247,.18);
+    }
+
+    /* ==========================================================
+       CONTACT
+       ========================================================== */
+
     .contact-bar{
       display:flex;
       gap:12px;
       align-items:center;
       justify-content:flex-end;
+    }
+
+    .social{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
     }
 
     .social a{
@@ -333,33 +470,51 @@
       color:var(--white);
       background:rgba(255,255,255,0.02);
       border:1px solid rgba(255,255,255,0.03);
+      transition:
+        transform .15s ease,
+        background .15s ease;
     }
+
+    .social a:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,0.05);
+    }
+
+    /* ==========================================================
+       FOOTER
+       ========================================================== */
 
     footer{
       text-align:center;
       color:var(--muted);
       font-size:13px;
       padding:18px;
-      opacity:0.9;
+      opacity:.9;
     }
+
+    /* ==========================================================
+       MODAL
+       ========================================================== */
 
     .modal-backdrop{
       position:fixed;
       inset:0;
       display:none;
       place-items:center;
-      background:rgba(2,6,23,0.6);
+      background:rgba(2,6,23,.75);
       z-index:200;
       padding:28px;
+      backdrop-filter:blur(5px);
+      -webkit-backdrop-filter:blur(5px);
     }
 
     .modal{
-      width:min(1100px, 98%);
+      width:min(1100px,98%);
       max-height:90vh;
       background:#03111b;
       border-radius:12px;
       overflow:hidden;
-      box-shadow:0 20px 60px rgba(3,8,23,0.9);
+      box-shadow:0 20px 60px rgba(3,8,23,.9);
       display:flex;
       flex-direction:column;
     }
@@ -370,7 +525,7 @@
       justify-content:space-between;
       gap:10px;
       padding:12px 16px;
-      border-bottom:1px solid rgba(255,255,255,0.04);
+      border-bottom:1px solid rgba(255,255,255,.04);
     }
 
     .modal iframe{
@@ -385,10 +540,15 @@
       display:flex;
       gap:8px;
       justify-content:flex-end;
-      border-top:1px solid rgba(255,255,255,0.03);
+      border-top:1px solid rgba(255,255,255,.03);
     }
 
+    /* ==========================================================
+       RESPONSIVE
+       ========================================================== */
+
     @media (max-width:980px){
+
       .hero{
         grid-template-columns:1fr;
       }
@@ -402,7 +562,32 @@
       }
     }
 
+    @media (max-width:680px){
+
+      .section-title{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+
+      .contact-bar{
+        width:100%;
+      }
+
+      .social{
+        width:100%;
+      }
+
+      .project-card .actions{
+        flex-direction:column;
+      }
+
+      .project-card .actions .btn{
+        width:100%;
+      }
+    }
+
     @media (max-width:520px){
+
       .nav-link{
         display:none;
       }
@@ -421,22 +606,38 @@
         height:52px;
       }
 
+      .brand h1{
+        font-size:16px;
+      }
+
+      .brand > div > div{
+        font-size:11px !important;
+      }
+
       .cta-row{
         flex-wrap:wrap;
       }
 
-      .project-card .actions{
-        flex-direction:column;
+      .cta-row .btn{
+        width:100%;
       }
 
-      .project-card .actions .btn{
-        width:100%;
+      .modal-backdrop{
+        padding:10px;
+      }
+
+      .modal header{
+        flex-wrap:wrap;
+      }
+
+      .modal iframe{
+        height:70vh;
       }
     }
 
     a:focus,
     button:focus{
-      outline:3px solid rgba(127,196,255,0.18);
+      outline:3px solid rgba(127,196,255,.18);
       outline-offset:3px;
       border-radius:8px;
     }
@@ -447,33 +648,72 @@
 
   <div class="wrap">
 
-    <!-- HEADER -->
+    <!-- ========================================================
+         HEADER
+         ========================================================= -->
+
     <header class="site-header" role="banner">
 
       <div class="brand">
+
         <img
           src="main/cover.jpg"
           alt="David Peters - profile picture"
         />
 
         <div>
-          <h1>David Peters</h1>
 
-          <div style="color:var(--muted);font-size:13px">
+          <h1>
+            David Peters
+          </h1>
+
+          <div
+            style="
+              color:var(--muted);
+              font-size:13px;
+            "
+          >
             Front-end Web Developer • Open to work
           </div>
+
         </div>
+
       </div>
+
 
       <nav
         class="primary"
         role="navigation"
         aria-label="Primary navigation"
       >
-        <a class="nav-link" href="#about">About</a>
-        <a class="nav-link" href="#skills">Skills</a>
-        <a class="nav-link" href="#projects">Projects</a>
-        <a class="nav-link" href="#contact">Contact</a>
+
+        <a
+          class="nav-link"
+          href="#about"
+        >
+          About
+        </a>
+
+        <a
+          class="nav-link"
+          href="#skills"
+        >
+          Skills
+        </a>
+
+        <a
+          class="nav-link"
+          href="#projects"
+        >
+          Projects
+        </a>
+
+        <a
+          class="nav-link"
+          href="#contact"
+        >
+          Contact
+        </a>
 
         <a
           class="btn"
@@ -485,25 +725,42 @@
           <i class="fas fa-download"></i>
           CV
         </a>
+
       </nav>
 
     </header>
 
 
-    <!-- HERO / ABOUT -->
-    <section id="about" class="hero">
+    <!-- ========================================================
+         HERO / ABOUT
+         ========================================================= -->
+
+    <section
+      id="about"
+      class="hero"
+    >
 
       <div class="intro card">
 
-        <h2>About me</h2>
+        <h2>
+          About me
+        </h2>
 
         <p style="color:var(--muted)">
-          Hi — I'm <strong>David Peters</strong>. I design & build
-          responsive web apps and interfaces. I work across HTML,
-          CSS, JS and modern frameworks like React, Redux. I value
-          clarity, accessibility, and performance. Currently open
-          to freelance and full-time roles.
+
+          Hi — I'm <strong>David Peters</strong>.
+          I design and build responsive web applications
+          and modern interfaces. I work with HTML, CSS,
+          JavaScript, TypeScript and modern frameworks
+          including React and Next.js.
+
+          I build responsive, accessible and performant
+          interfaces using technologies such as Tailwind CSS,
+          Redux and REST APIs. I'm currently open to freelance,
+          internship and full-time opportunities.
+
         </p>
+
 
         <div class="cta-row">
 
@@ -526,29 +783,39 @@
 
         </div>
 
+
         <div
           style="
             margin-top:18px;
             display:flex;
-            gap:12px;
+            gap:20px;
             flex-wrap:wrap;
           "
         >
 
           <div style="min-width:150px;">
-            <strong>Location</strong>
+
+            <strong>
+              Location
+            </strong>
 
             <div style="color:var(--muted)">
               Nigeria
             </div>
+
           </div>
 
+
           <div style="min-width:120px;">
-            <strong>Email</strong>
+
+            <strong>
+              Email
+            </strong>
 
             <div style="color:var(--muted)">
               davidoluwaseun874@gmail.com
             </div>
+
           </div>
 
         </div>
@@ -557,6 +824,7 @@
 
 
       <!-- PROFILE CARD -->
+
       <aside
         class="profile-card card"
         aria-label="Profile card"
@@ -567,23 +835,36 @@
           alt="Project / design sample"
         />
 
+
         <div class="profile-meta">
 
           <div class="meta-item">
-            <strong>10+</strong>
+
+            <strong>
+              30+
+            </strong>
+
             <span style="color:var(--muted)">
               Projects
             </span>
+
           </div>
 
+
           <div class="meta-item">
-            <strong>5</strong>
+
+            <strong>
+              5+
+            </strong>
+
             <span style="color:var(--muted)">
               Companies
             </span>
+
           </div>
 
         </div>
+
 
         <div
           style="
@@ -599,7 +880,7 @@
             class="btn"
             href="https://davcent.online"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
             Visit Davcent
           </a>
@@ -620,7 +901,10 @@
     </section>
 
 
-    <!-- EXPERIENCE -->
+    <!-- ========================================================
+         EXPERIENCE
+         ========================================================= -->
+
     <section
       class="card"
       id="experience"
@@ -635,36 +919,46 @@
 
       </div>
 
+
       <p style="color:var(--muted)">
 
-        I've worked with companies and clients including
+        I've worked on web and software projects
+        involving real estate, fintech, payment systems,
+        dashboards, e-commerce and responsive web
+        applications.
 
+        My experience includes projects associated with
         <a
           href="https://davcent.online"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           DAVCENT
-        </a>
+        </a>,
+
+        <strong>
+          D1stclassheritage
+        </strong>,
+
+        <strong>
+          OneNixPay
+        </strong>,
 
         and
 
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener"
-        >
-          NIKE-OBI-TECH
-        </a>.
-
-        I focus on accessible, performant front-end solutions.
+        <strong>
+          DomyHeritage
+        </strong>.
 
       </p>
 
     </section>
 
 
-    <!-- SKILLS -->
+    <!-- ========================================================
+         SKILLS
+         ========================================================= -->
+
     <section
       class="card"
       id="skills"
@@ -683,15 +977,17 @@
             font-size:13px;
           "
         >
-          Tools & frameworks I use regularly
+          Technologies & tools I work with
         </div>
 
       </div>
 
 
-      <div style="margin-top:12px">
+      <!-- DESIGN & MARKUP -->
 
-        <h4 style="margin:0 0 8px 0">
+      <div class="skill-category">
+
+        <h4>
           Design & Markup
         </h4>
 
@@ -702,12 +998,17 @@
 
           <div class="skill" role="listitem">
             <i class="fab fa-html5"></i>
-            HTML
+            HTML5
           </div>
 
           <div class="skill" role="listitem">
             <i class="fab fa-css3-alt"></i>
-            CSS / SASS
+            CSS3
+          </div>
+
+          <div class="skill" role="listitem">
+            <i class="fab fa-sass"></i>
+            SASS / SCSS
           </div>
 
           <div class="skill" role="listitem">
@@ -716,15 +1017,69 @@
           </div>
 
           <div class="skill" role="listitem">
-            <i class="fab fa-js-square"></i>
-            JavaScript
+            <span class="skill-badge">
+              TW
+            </span>
+            Tailwind CSS
+          </div>
+
+          <div class="skill" role="listitem">
+            <span class="skill-badge">
+              UI
+            </span>
+            Responsive UI
           </div>
 
         </div>
 
+      </div>
 
-        <h4 style="margin:12px 0 8px 0">
-          Front-end & Back-end
+
+      <!-- JAVASCRIPT -->
+
+      <div class="skill-category">
+
+        <h4>
+          JavaScript & TypeScript
+        </h4>
+
+        <div class="skills-grid">
+
+          <div class="skill" role="listitem">
+            <i class="fab fa-js-square"></i>
+            JavaScript
+          </div>
+
+          <div class="skill" role="listitem">
+            <span class="skill-badge">
+              TS
+            </span>
+            TypeScript
+          </div>
+
+          <div class="skill" role="listitem">
+            <i class="fab fa-js"></i>
+            jQuery
+          </div>
+
+          <div class="skill" role="listitem">
+            <span class="skill-badge">
+              API
+            </span>
+            REST APIs
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- FRONTEND -->
+
+      <div class="skill-category">
+
+        <h4>
+          Front-end Frameworks & Libraries
         </h4>
 
         <div class="skills-grid">
@@ -735,18 +1090,179 @@
           </div>
 
           <div class="skill" role="listitem">
+            <span class="skill-badge">
+              NX
+            </span>
+            Next.js
+          </div>
+
+          <div class="skill" role="listitem">
+            <span class="skill-badge">
+              RT
+            </span>
+            React Router
+          </div>
+
+          <div class="skill" role="listitem">
+            <span class="skill-badge">
+              RD
+            </span>
+            Redux
+          </div>
+
+          <div class="skill" role="listitem">
+            <span class="skill-badge">
+              RTK
+            </span>
+            Redux Toolkit
+          </div>
+
+          <div class="skill" role="listitem">
+            <span class="skill-badge">
+              V
+            </span>
+            Vite
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- BACKEND -->
+
+      <div class="skill-category">
+
+        <h4>
+          Back-end & Programming
+        </h4>
+
+        <div class="skills-grid">
+
+          <div class="skill" role="listitem">
             <i class="fab fa-node-js"></i>
             Node.js
           </div>
 
           <div class="skill" role="listitem">
-            <i class="fab fa-python"></i>
+            <span class="skill-badge">
+              PY
+            </span>
             Python
           </div>
 
           <div class="skill" role="listitem">
-            <i class="fab fa-js"></i>
-            jQuery
+            <span class="skill-badge">
+              SQL
+            </span>
+            SQL
+          </div>
+
+          <div class="skill" role="listitem">
+            <span class="skill-badge">
+              JS
+            </span>
+            JSON
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- TOOLS -->
+
+      <div class="skill-category">
+
+        <h4>
+          Development Tools
+        </h4>
+
+        <div class="skills-grid">
+
+          <div class="skill" role="listitem">
+            <i class="fab fa-git-alt"></i>
+            Git
+          </div>
+
+          <div class="skill" role="listitem">
+            <i class="fab fa-github"></i>
+            GitHub
+          </div>
+
+          <div class="skill" role="listitem">
+            <span class="skill-badge">
+              VS
+            </span>
+            VS Code
+          </div>
+
+          <div class="skill" role="listitem">
+            <span class="skill-badge">
+              API
+            </span>
+            Swagger / APIs
+          </div>
+
+          <div class="skill" role="listitem">
+            <span class="skill-badge">
+              NPM
+            </span>
+            npm
+          </div>
+
+          <div class="skill" role="listitem">
+            <span class="skill-badge">
+              CI
+            </span>
+            Deployment
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- DEVELOPMENT -->
+
+      <div class="skill-category">
+
+        <h4>
+          Development Practices
+        </h4>
+
+        <div class="skills-grid">
+
+          <div class="skill" role="listitem">
+            Component Architecture
+          </div>
+
+          <div class="skill" role="listitem">
+            Responsive Design
+          </div>
+
+          <div class="skill" role="listitem">
+            API Integration
+          </div>
+
+          <div class="skill" role="listitem">
+            Authentication
+          </div>
+
+          <div class="skill" role="listitem">
+            Form Handling
+          </div>
+
+          <div class="skill" role="listitem">
+            Accessibility
+          </div>
+
+          <div class="skill" role="listitem">
+            Performance Optimization
+          </div>
+
+          <div class="skill" role="listitem">
+            UI/UX Implementation
           </div>
 
         </div>
@@ -756,7 +1272,10 @@
     </section>
 
 
-    <!-- PROJECTS -->
+    <!-- ========================================================
+         PROJECTS
+         ========================================================= -->
+
     <section
       class="card"
       id="projects"
@@ -775,7 +1294,7 @@
             font-size:13px;
           "
         >
-          Click preview to view a live demo inside the page
+          Live projects & development work
         </div>
 
       </div>
@@ -791,7 +1310,10 @@
     </section>
 
 
-    <!-- CONTACT -->
+    <!-- ========================================================
+         CONTACT
+         ========================================================= -->
+
     <section
       class="card"
       id="contact"
@@ -804,6 +1326,7 @@
           Contact
         </h3>
 
+
         <div class="contact-bar">
 
           <div
@@ -814,7 +1337,7 @@
             <a
               href="https://wa.me/08087846847"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               title="WhatsApp"
             >
               <i class="fab fa-whatsapp"></i>
@@ -823,7 +1346,7 @@
             <a
               href="https://www.facebook.com/profile.php?id=61551330303945"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               title="Facebook"
             >
               <i class="fab fa-facebook-f"></i>
@@ -832,7 +1355,7 @@
             <a
               href="https://twitter.com/davidpeters874"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               title="Twitter"
             >
               <i class="fab fa-twitter"></i>
@@ -841,7 +1364,7 @@
             <a
               href="https://www.instagram.com/davidpeters1098"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               title="Instagram"
             >
               <i class="fab fa-instagram"></i>
@@ -850,7 +1373,7 @@
             <a
               href="https://www.youtube.com/@Davcent"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               title="YouTube"
             >
               <i class="fab fa-youtube"></i>
@@ -892,7 +1415,7 @@
           class="btn"
           href="https://wa.me/08087846847"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           <i class="fab fa-whatsapp"></i>
           Message
@@ -912,7 +1435,10 @@
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- ========================================================
+         FOOTER
+         ========================================================= -->
+
     <footer>
 
       © <span id="year"></span>
@@ -927,7 +1453,10 @@
   </div>
 
 
-  <!-- PROJECT / CV MODAL -->
+  <!-- ==========================================================
+       PROJECT / CV MODAL
+       ========================================================== -->
+
   <div
     id="modalBackdrop"
     class="modal-backdrop"
@@ -949,6 +1478,7 @@
             display:flex;
             gap:12px;
             align-items:center;
+            min-width:0;
           "
         >
 
@@ -961,6 +1491,9 @@
             style="
               color:var(--muted);
               font-size:13px;
+              overflow:hidden;
+              text-overflow:ellipsis;
+              white-space:nowrap;
             "
           >
           </div>
@@ -968,12 +1501,17 @@
         </div>
 
 
-        <div>
+        <div
+          style="
+            display:flex;
+            gap:8px;
+            flex-shrink:0;
+          "
+        >
 
           <button
             id="modalOpenLink"
             class="btn secondary"
-            style="margin-right:8px"
             type="button"
           >
             Open in new tab
@@ -1008,7 +1546,7 @@
           class="btn"
           href="#"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           <i class="fas fa-external-link-alt"></i>
           Open Project
@@ -1025,216 +1563,242 @@
 
     /*
      * ==========================================================
-     * PROJECT LIST
+     * PROJECT DATA
      * ==========================================================
+     *
+     * IMPORTANT:
+     * Every project object is separated by a comma.
+     * This prevents the syntax error that stopped the
+     * previous project list from rendering.
      */
 
     const PROJECTS = [
 
-      /*
-       * HTML / CSS PROJECTS
-       */
+      /* --------------------------------------------------------
+         HTML / CSS
+         -------------------------------------------------------- */
 
       {
-        id: 'photo_album',
-        title: 'Photo Album',
-        path: 'photo_album/index.html',
-        type: 'HTML/CSS'
+        id:'photo_album',
+        title:'Photo Album',
+        path:'photo_album/index.html',
+        type:'HTML / CSS'
       },
 
       {
-        id: 'cafe_menu',
-        title: 'Cafe Menu',
-        path: 'Cafe_menu/index.html',
-        type: 'HTML/CSS'
+        id:'cafe_menu',
+        title:'Cafe Menu',
+        path:'Cafe_menu/index.html',
+        type:'HTML / CSS'
       },
 
       {
-        id: 'color_markers',
-        title: 'Color Markers',
-        path: 'Color_markers/index.html',
-        type: 'HTML/CSS'
+        id:'color_markers',
+        title:'Color Markers',
+        path:'Color_markers/index.html',
+        type:'HTML / CSS'
       },
 
       {
-        id: 'registration_form',
-        title: 'Registration Form',
-        path: 'Registration_form/index.html',
-        type: 'HTML/CSS'
+        id:'registration_form',
+        title:'Registration Form',
+        path:'Registration_form/index.html',
+        type:'HTML / CSS'
       },
 
       {
-        id: 'rothko',
-        title: 'Rothko Painting',
-        path: 'Rothko_Painting/index.html',
-        type: 'HTML/CSS'
+        id:'rothko',
+        title:'Rothko Painting',
+        path:'Rothko_Painting/index.html',
+        type:'HTML / CSS'
       },
 
       {
-        id: 'photo_gallery',
-        title: 'Photo Gallery',
-        path: 'Photo_Gallery/index.html',
-        type: 'HTML/CSS'
+        id:'photo_gallery',
+        title:'Photo Gallery',
+        path:'Photo_Gallery/index.html',
+        type:'HTML / CSS'
       },
 
       {
-        id: 'nutrition_label',
-        title: 'Nutrition Label',
-        path: 'Nutrition_Label/index.html',
-        type: 'HTML/CSS'
+        id:'nutrition_label',
+        title:'Nutrition Label',
+        path:'Nutrition_Label/index.html',
+        type:'HTML / CSS'
       },
 
       {
-        id: 'balancesheet',
-        title: 'Balance Sheet',
-        path: 'Balancesheet/index.html',
-        type: 'HTML/CSS'
+        id:'balancesheet',
+        title:'Balance Sheet',
+        path:'Balancesheet/index.html',
+        type:'HTML / CSS'
       },
 
       {
-        id: 'accessibility_quiz',
-        title: 'Accessibility Quiz',
-        path: 'Accessibility_quiz/index.html',
-        type: 'HTML/CSS'
+        id:'accessibility_quiz',
+        title:'Accessibility Quiz',
+        path:'Accessibility_quiz/index.html',
+        type:'HTML / CSS'
       },
 
       {
-        id: 'at_services',
-        title: 'AT-Services',
-        path: 'AT-Services/index.html',
-        type: 'HTML/CSS'
+        id:'at_services',
+        title:'AT-Services',
+        path:'AT-Services/index.html',
+        type:'HTML / CSS'
       },
 
       {
-        id: 'ferris_wheel',
-        title: 'Ferris Wheel',
-        path: 'Ferris_wheel/index.html',
-        type: 'HTML/CSS'
+        id:'ferris_wheel',
+        title:'Ferris Wheel',
+        path:'Ferris_wheel/index.html',
+        type:'HTML / CSS'
       },
 
 
-      /*
-       * JAVASCRIPT / GAME PROJECTS
-       */
+      /* --------------------------------------------------------
+         JAVASCRIPT / GAME DEVELOPMENT
+         -------------------------------------------------------- */
 
       {
-        id: 'exam_test',
-        title: 'Exam Test',
-        path: 'GNS_103&105_test/exam.html',
-        type: 'JavaScript'
+        id:'exam_test',
+        title:'Exam Test',
+        path:'GNS_103&105_test/exam.html',
+        type:'JavaScript'
       },
 
       {
-        id: 'game_1',
-        title: 'Game Dev 1',
-        path: 'Game_Dev_Project/Game_Dev_1/index.html',
-        type: 'JavaScript'
+        id:'game_1',
+        title:'Game Dev 1',
+        path:'Game_Dev_Project/Game_Dev_1/index.html',
+        type:'JavaScript'
       },
 
       {
-        id: 'game_2',
-        title: 'Game Dev 2',
-        path: 'Game_Dev_Project/Game_Dev_2/index.html',
-        type: 'JavaScript'
+        id:'game_2',
+        title:'Game Dev 2',
+        path:'Game_Dev_Project/Game_Dev_2/index.html',
+        type:'JavaScript'
       },
 
       {
-        id: 'game_3A',
-        title: 'Game Dev 3A',
-        path: 'Game_Dev_Project/Game_Dev_3/GD 3A/index.html',
-        type: 'JavaScript'
+        id:'game_3A',
+        title:'Game Dev 3A',
+        path:'Game_Dev_Project/Game_Dev_3/GD 3A/index.html',
+        type:'JavaScript'
       },
 
       {
-        id: 'game_3B',
-        title: 'Game Dev 3B',
-        path: 'Game_Dev_Project/Game_Dev_3/GD 3B/index.html',
-        type: 'JavaScript'
+        id:'game_3B',
+        title:'Game Dev 3B',
+        path:'Game_Dev_Project/Game_Dev_3/GD 3B/index.html',
+        type:'JavaScript'
       },
 
       {
-        id: 'game_3C',
-        title: 'Game Dev 3C',
-        path: 'Game_Dev_Project/Game_Dev_3/GD 3C/index.html',
-        type: 'JavaScript'
+        id:'game_3C',
+        title:'Game Dev 3C',
+        path:'Game_Dev_Project/Game_Dev_3/GD 3C/index.html',
+        type:'JavaScript'
       },
 
       {
-        id: 'game_3D',
-        title: 'Game Dev 3D',
-        path: 'Game_Dev_Project/Game_Dev_3/GD 3D/index.html',
-        type: 'JavaScript'
+        id:'game_3D',
+        title:'Game Dev 3D',
+        path:'Game_Dev_Project/Game_Dev_3/GD 3D/index.html',
+        type:'JavaScript'
       },
 
       {
-        id: 'game_4',
-        title: 'Game Dev 4',
-        path: 'Game_Dev_Project/Game_Dev_4/index.html',
-        type: 'JavaScript'
+        id:'game_4',
+        title:'Game Dev 4',
+        path:'Game_Dev_Project/Game_Dev_4/index.html',
+        type:'JavaScript'
       },
 
       {
-        id: 'game_5',
-        title: 'Game Dev 5',
-        path: 'Game_Dev_Project/Game_Dev_5/index.html',
-        type: 'JavaScript'
+        id:'game_5',
+        title:'Game Dev 5',
+        path:'Game_Dev_Project/Game_Dev_5/index.html',
+        type:'JavaScript'
       },
 
       {
-        id: 'game_6',
-        title: 'Game Dev 6',
-        path: 'Game_Dev_Project/Game_Dev_6/index.html',
-        type: 'JavaScript'
+        id:'game_6',
+        title:'Game Dev 6',
+        path:'Game_Dev_Project/Game_Dev_6/index.html',
+        type:'JavaScript'
       },
 
       {
-        id: 'game_7',
-        title: 'Game Dev 7',
-        path: 'Game_Dev_Project/Game_Dev_7/index.html',
-        type: 'JavaScript'
+        id:'game_7',
+        title:'Game Dev 7',
+        path:'Game_Dev_Project/Game_Dev_7/index.html',
+        type:'JavaScript'
       },
 
       {
-        id: 'game_8',
-        title: 'Game Dev 8',
-        path: 'Game_Dev_Project/Game_Dev_8/index.html',
-        type: 'JavaScript'
+        id:'game_8',
+        title:'Game Dev 8',
+        path:'Game_Dev_Project/Game_Dev_8/index.html',
+        type:'JavaScript'
       },
 
       {
-        id: 'ogm_logo',
-        title: 'OGM Logo',
-        path: 'OGM_LOGO/index.html',
-        type: 'JavaScript'
+        id:'ogm_logo',
+        title:'OGM Logo',
+        path:'OGM_LOGO/index.html',
+        type:'JavaScript'
       },
 
 
-      /*
-       * REACT / WEB APPLICATION PROJECTS
-       */
+      /* --------------------------------------------------------
+         LIVE / PROFESSIONAL PROJECTS
+         -------------------------------------------------------- */
 
       {
-        id: 'veepay_dashboard',
-        title: 'VeePay Dashboard',
-        path: 'https://veepay-dashboard-zeta.vercel.app/user/info/1',
-        type: 'React / Dashboard',
-        external: true
+        id:'veepay',
+        title:'VeePay Dashboard',
+        path:'https://veepay-dashboard-zeta.vercel.app/user/info/1',
+        type:'React / Dashboard',
+        external:true,
+        featured:true
       },
 
       {
-        id: 'domyheritage',
-        title: 'DomyHeritage',
-        path: 'https://domyheritage-domy-frontend-xrcu.vercel.app/',
-        type: 'React, Next js / Real Estate',
-        external: true
-      }
+        id:'onenixpay',
+        title:'OneNixPay',
+        path:'https://onenixpay.com',
+        type:'Fintech / Payment Platform',
+        external:true,
+        featured:true
+      },
 
       {
-        id: 'books online store',
-        title: 'WEM',
-        path: 'https://wayfinder-reads.vercel.app/',
-        type: 'React / Sales/Online-store',
-        external: true
+        id:'d1stclassheritage',
+        title:'D1stclassheritage',
+        path:'https://d1stclassheritage.com',
+        type:'Fintech / Real Estate Ecosystem',
+        external:true,
+        featured:true
+      },
+
+      {
+        id:'domyheritage',
+        title:'DomyHeritage',
+        path:'https://domyheritage-domy-frontend-xrcu.vercel.app/',
+        type:'React / Real Estate',
+        external:true,
+        featured:true
+      },
+
+      {
+        id:'wem',
+        title:'WEM — Wayfinder Reads',
+        path:'https://wayfinder-reads.vercel.app/',
+        type:'React / Online Store',
+        external:true,
+        featured:true
       }
 
     ];
@@ -1277,18 +1841,20 @@
      * ==========================================================
      */
 
-    function escapeHtml(str){
+    function escapeHtml(value){
 
-      return String(str).replace(
+      return String(value).replace(
         /[&<>"']/g,
-        function(s){
+        function(character){
+
           return {
             '&':'&amp;',
             '<':'&lt;',
             '>':'&gt;',
             '"':'&quot;',
             "'":'&#39;'
-          }[s];
+          }[character];
+
         }
       );
 
@@ -1303,6 +1869,10 @@
 
     function renderProjects(){
 
+      if(!grid){
+        return;
+      }
+
       grid.innerHTML = '';
 
       PROJECTS.forEach(function(project){
@@ -1310,56 +1880,44 @@
         const card =
           document.createElement('article');
 
-        card.className = 'project-card';
+        card.className =
+          'project-card' +
+          (project.featured ? ' featured' : '');
 
-        const encodedPath =
-          encodeURI(project.path);
+        const safePath =
+          escapeHtml(project.path);
 
-        const isExternal =
-          project.external === true;
+        const safeTitle =
+          escapeHtml(project.title);
 
-        const previewButton =
-          isExternal
-            ? `
-              <button
-                class="btn preview-btn"
-                type="button"
-                data-path="${encodedPath}"
-                data-title="${escapeHtml(project.title)}"
-              >
-                <i class="fas fa-eye"></i>
-                Preview
-              </button>
-            `
-            : `
-              <button
-                class="btn preview-btn"
-                type="button"
-                data-path="${encodedPath}"
-                data-title="${escapeHtml(project.title)}"
-              >
-                <i class="fas fa-eye"></i>
-                Preview
-              </button>
-            `;
+        const safeType =
+          escapeHtml(project.type);
 
         card.innerHTML = `
 
           <div class="title">
-            ${escapeHtml(project.title)}
+            ${safeTitle}
           </div>
 
           <div class="meta">
-            ${escapeHtml(project.type)}
+            ${safeType}
           </div>
 
           <div class="actions">
 
-            ${previewButton}
+            <button
+              class="btn preview-btn"
+              type="button"
+              data-path="${safePath}"
+              data-title="${safeTitle}"
+            >
+              <i class="fas fa-eye"></i>
+              Preview
+            </button>
 
             <a
               class="btn secondary"
-              href="${encodedPath}"
+              href="${safePath}"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -1386,15 +1944,16 @@
 
     function openModal(
       path,
-      title = 'Preview',
-      downloadHref = null
+      title='Project Preview'
     ){
 
       modalFrame.src = path;
 
-      modalTitle.textContent = title;
+      modalTitle.textContent =
+        title;
 
-      modalSubtitle.textContent = path;
+      modalSubtitle.textContent =
+        path;
 
       modalOpenLink.onclick =
         function(){
@@ -1408,16 +1967,19 @@
         };
 
       modalDownload.href =
-        downloadHref || path;
+        path;
 
-      modalDownload.removeAttribute('download');
+      modalDownload.removeAttribute(
+        'download'
+      );
 
       modalDownload.innerHTML = `
         <i class="fas fa-external-link-alt"></i>
         Open Project
       `;
 
-      modalBackdrop.style.display = 'grid';
+      modalBackdrop.style.display =
+        'grid';
 
       modalBackdrop.setAttribute(
         'aria-hidden',
@@ -1437,48 +1999,55 @@
 
     function closeModal(){
 
-      modalBackdrop.style.display = 'none';
+      modalBackdrop.style.display =
+        'none';
 
       modalBackdrop.setAttribute(
         'aria-hidden',
         'true'
       );
 
-      modalFrame.src = 'about:blank';
+      modalFrame.src =
+        'about:blank';
 
     }
 
 
     /*
      * ==========================================================
-     * PROJECT PREVIEW EVENTS
+     * PROJECT CLICK HANDLER
      * ==========================================================
      */
 
     grid.addEventListener(
       'click',
-      function(ev){
+      function(event){
 
         const button =
-          ev.target.closest('.preview-btn');
+          event.target.closest(
+            '.preview-btn'
+          );
 
         if(!button){
           return;
         }
 
         const path =
-          button.getAttribute('data-path');
+          button.getAttribute(
+            'data-path'
+          );
 
         const title =
-          button.getAttribute('data-title') ||
+          button.getAttribute(
+            'data-title'
+          ) ||
           'Project Preview';
 
         if(path){
 
           openModal(
             path,
-            title,
-            path
+            title
           );
 
         }
@@ -1489,7 +2058,7 @@
 
     /*
      * ==========================================================
-     * MODAL EVENTS
+     * MODAL CONTROLS
      * ==========================================================
      */
 
@@ -1501,9 +2070,12 @@
 
     modalBackdrop.addEventListener(
       'click',
-      function(ev){
+      function(event){
 
-        if(ev.target === modalBackdrop){
+        if(
+          event.target ===
+          modalBackdrop
+        ){
 
           closeModal();
 
@@ -1515,9 +2087,9 @@
 
     document.addEventListener(
       'keydown',
-      function(ev){
+      function(event){
 
-        if(ev.key === 'Escape'){
+        if(event.key === 'Escape'){
 
           closeModal();
 
@@ -1534,13 +2106,18 @@
      */
 
     document
-      .getElementById('openCvModalBtn')
+      .getElementById(
+        'openCvModalBtn'
+      )
       .addEventListener(
         'click',
         function(){
 
-          modalFrame.src =
+          const cvPath =
             'main/CV2.pdf';
+
+          modalFrame.src =
+            cvPath;
 
           modalTitle.textContent =
             'Curriculum Vitae';
@@ -1552,7 +2129,7 @@
             function(){
 
               window.open(
-                'main/CV2.pdf',
+                cvPath,
                 '_blank',
                 'noopener,noreferrer'
               );
@@ -1560,7 +2137,7 @@
             };
 
           modalDownload.href =
-            'main/CV2.pdf';
+            cvPath;
 
           modalDownload.setAttribute(
             'download',
@@ -1588,18 +2165,18 @@
 
     /*
      * ==========================================================
-     * INITIALIZE PAGE
+     * INITIALIZE
      * ==========================================================
      */
 
     renderProjects();
 
-    document.getElementById('year')
-      .textContent =
+    document.getElementById(
+      'year'
+    ).textContent =
       new Date().getFullYear();
 
   </script>
 
 </body>
 </html>
-
