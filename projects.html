@@ -9,7 +9,7 @@
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome (kept from your original) -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
   <meta name="color-scheme" content="light dark">
@@ -29,41 +29,52 @@
       --shadow: 0 6px 20px rgba(2,6,23,0.6);
     }
 
-    /* Respect user reduced motion */
     @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+      * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
     }
 
-    /* Reset & base */
-    *{box-sizing:border-box}
-    html,body{height:100%}
+    *{
+      box-sizing:border-box;
+    }
+
+    html,
+    body{
+      height:100%;
+    }
+
     body{
       margin:0;
       font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: linear-gradient(180deg,#071025 0%, #0b1320 100%);
+      background:linear-gradient(180deg,#071025 0%, #0b1320 100%);
       color:var(--white);
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
       line-height:1.45;
     }
 
-    /* Layout wrapper */
     .wrap{
       max-width:var(--max-width);
-      margin: 28px auto;
-      padding: 24px;
+      margin:28px auto;
+      padding:24px;
       display:flex;
       flex-direction:column;
       gap:28px;
     }
 
-    /* Header */
     header.site-header{
       display:flex;
       align-items:center;
       gap:18px;
       justify-content:space-between;
-      background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      background:linear-gradient(
+        90deg,
+        rgba(255,255,255,0.02),
+        rgba(255,255,255,0.01)
+      );
       padding:16px;
       border-radius:12px;
       box-shadow:var(--shadow);
@@ -71,29 +82,34 @@
       top:18px;
       z-index:40;
     }
-    .brand {
+
+    .brand{
       display:flex;
       align-items:center;
       gap:12px;
     }
+
     .brand img{
       width:64px;
       height:64px;
       object-fit:cover;
       border-radius:12px;
-      border: 2px solid rgba(255,255,255,0.06);
+      border:2px solid rgba(255,255,255,0.06);
       background:var(--glass);
     }
+
     .brand h1{
       font-size:18px;
       margin:0;
       letter-spacing:0.2px;
     }
+
     nav.primary{
       display:flex;
       gap:10px;
       align-items:center;
     }
+
     .nav-link{
       color:var(--white);
       text-decoration:none;
@@ -102,27 +118,52 @@
       border-radius:8px;
       transition:background .18s, transform .12s;
     }
-    .nav-link:hover{ background: rgba(255,255,255,0.03); transform:translateY(-2px) }
 
-    /* Hero / About */
+    .nav-link:hover{
+      background:rgba(255,255,255,0.03);
+      transform:translateY(-2px);
+    }
+
     .hero{
       display:grid;
-      grid-template-columns: 1fr 320px;
+      grid-template-columns:1fr 320px;
       gap:28px;
       align-items:center;
     }
+
     .hero .intro{
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      background:linear-gradient(
+        180deg,
+        rgba(255,255,255,0.02),
+        rgba(255,255,255,0.01)
+      );
       padding:22px;
       border-radius:12px;
       box-shadow:0 8px 30px rgba(2,8,23,0.6);
     }
-    .hero h2{ margin-top:0; margin-bottom:6px; font-size:22px }
-    .hero p{ color:var(--muted); margin:0 0 12px 0 }
-    .cta-row{ display:flex; gap:12px; align-items:center; margin-top:14px }
+
+    .hero h2{
+      margin-top:0;
+      margin-bottom:6px;
+      font-size:22px;
+    }
+
+    .hero p{
+      color:var(--muted);
+      margin:0 0 12px 0;
+    }
+
+    .cta-row{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      margin-top:14px;
+    }
+
     .btn{
       display:inline-flex;
       align-items:center;
+      justify-content:center;
       gap:8px;
       background:var(--accent);
       color:#012;
@@ -133,6 +174,7 @@
       border:none;
       cursor:pointer;
     }
+
     .btn.secondary{
       background:transparent;
       color:var(--white);
@@ -140,9 +182,12 @@
       font-weight:600;
     }
 
-    /* Right column: photo + quick stats */
     .profile-card{
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      background:linear-gradient(
+        180deg,
+        rgba(255,255,255,0.02),
+        rgba(255,255,255,0.01)
+      );
       padding:16px;
       border-radius:12px;
       display:flex;
@@ -150,30 +195,66 @@
       gap:12px;
       align-items:center;
     }
-    .profile-card img{ width:100%; height:220px; object-fit:cover; border-radius:10px }
-    .profile-meta { width:100%; display:flex; justify-content:space-between; gap:10px }
-    .meta-item{ text-align:center }
-    .meta-item strong{ display:block; font-size:18px }
 
-    /* Sections (skills, projects) */
+    .profile-card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      border-radius:10px;
+    }
+
+    .profile-meta{
+      width:100%;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+    }
+
+    .meta-item{
+      text-align:center;
+    }
+
+    .meta-item strong{
+      display:block;
+      font-size:18px;
+    }
+
     section.card{
-      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.01));
+      background:linear-gradient(
+        180deg,
+        rgba(255,255,255,0.01),
+        rgba(255,255,255,0.01)
+      );
       padding:18px;
       border-radius:12px;
-      box-shadow: 0 6px 20px rgba(2,6,23,0.45);
+      box-shadow:0 6px 20px rgba(2,6,23,0.45);
     }
+
     .section-title{
       display:flex;
       justify-content:space-between;
       align-items:center;
       gap:10px;
     }
-    .section-title h3{ margin:0; font-size:16px }
 
-    /* Skills list */
-    .skills-grid{ display:flex; flex-wrap:wrap; gap:12px; margin-top:12px }
+    .section-title h3{
+      margin:0;
+      font-size:16px;
+    }
+
+    .skills-grid{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:12px;
+    }
+
     .skill{
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      background:linear-gradient(
+        180deg,
+        rgba(255,255,255,0.02),
+        rgba(255,255,255,0.01)
+      );
       padding:10px 12px;
       border-radius:10px;
       min-width:120px;
@@ -183,17 +264,25 @@
       align-items:center;
       border:1px solid rgba(255,255,255,0.03);
     }
-    .skill i{ font-size:18px; opacity:0.95 }
 
-    /* Projects grid */
+    .skill i{
+      font-size:18px;
+      opacity:0.95;
+    }
+
     .projects-grid{
       margin-top:14px;
       display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
       gap:14px;
     }
+
     .project-card{
-      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      background:linear-gradient(
+        180deg,
+        rgba(255,255,255,0.02),
+        rgba(255,255,255,0.01)
+      );
       padding:12px;
       border-radius:12px;
       display:flex;
@@ -201,353 +290,1316 @@
       gap:10px;
       min-height:120px;
       border:1px solid rgba(255,255,255,0.03);
-      transition: transform .12s, box-shadow .12s;
+      transition:transform .12s, box-shadow .12s;
     }
-    .project-card:hover{ transform: translateY(-6px); box-shadow: 0 10px 30px rgba(3,8,23,0.6) }
-    .project-card .title{ font-weight:700; font-size:15px }
-    .project-card .meta{ color:var(--muted); font-size:13px }
-    .project-card .actions{ margin-top:auto; display:flex; gap:8px; }
 
-    /* Contact bar */
+    .project-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 10px 30px rgba(3,8,23,0.6);
+    }
+
+    .project-card .title{
+      font-weight:700;
+      font-size:15px;
+    }
+
+    .project-card .meta{
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .project-card .actions{
+      margin-top:auto;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+
     .contact-bar{
       display:flex;
       gap:12px;
       align-items:center;
       justify-content:flex-end;
     }
+
     .social a{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      width:44px;height:44px;border-radius:10px;
-      text-decoration:none;color:var(--white);
-      background: rgba(255,255,255,0.02);
+      width:44px;
+      height:44px;
+      border-radius:10px;
+      text-decoration:none;
+      color:var(--white);
+      background:rgba(255,255,255,0.02);
       border:1px solid rgba(255,255,255,0.03);
     }
 
-    /* Footer */
     footer{
-      text-align:center; color:var(--muted); font-size:13px; padding:18px; opacity:0.9
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      padding:18px;
+      opacity:0.9;
     }
 
-    /* Modal (project preview & CV) */
     .modal-backdrop{
-      position:fixed; inset:0; display:none; place-items:center;
-      background: rgba(2,6,23,0.6); z-index:200;
+      position:fixed;
+      inset:0;
+      display:none;
+      place-items:center;
+      background:rgba(2,6,23,0.6);
+      z-index:200;
       padding:28px;
     }
+
     .modal{
       width:min(1100px, 98%);
       max-height:90vh;
-      background: #03111b;
+      background:#03111b;
       border-radius:12px;
       overflow:hidden;
-      box-shadow: 0 20px 60px rgba(3,8,23,0.9);
-      display:flex; flex-direction:column;
+      box-shadow:0 20px 60px rgba(3,8,23,0.9);
+      display:flex;
+      flex-direction:column;
     }
+
     .modal header{
-      display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 16px; border-bottom:1px solid rgba(255,255,255,0.04)
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      padding:12px 16px;
+      border-bottom:1px solid rgba(255,255,255,0.04);
     }
+
     .modal iframe{
-      border:0; width:100%; height:72vh; background:#fff;
+      border:0;
+      width:100%;
+      height:72vh;
+      background:#fff;
     }
-    .modal .modal-actions{ padding:12px 16px; display:flex; gap:8px; justify-content:flex-end; border-top:1px solid rgba(255,255,255,0.03) }
 
-    /* Responsive */
+    .modal .modal-actions{
+      padding:12px 16px;
+      display:flex;
+      gap:8px;
+      justify-content:flex-end;
+      border-top:1px solid rgba(255,255,255,0.03);
+    }
+
     @media (max-width:980px){
-      .hero{ grid-template-columns:1fr; }
-      .profile-card img{ height:160px }
-      .contact-bar{ justify-content:flex-start}
-    }
-    @media (max-width:520px){
-      .nav-link{ display:none } /* keep header compact on small screens; mobile friendly alternative can be added */
+      .hero{
+        grid-template-columns:1fr;
+      }
+
+      .profile-card img{
+        height:160px;
+      }
+
+      .contact-bar{
+        justify-content:flex-start;
+      }
     }
 
-    /* Nice small focus styles */
-    a:focus, button:focus { outline: 3px solid rgba(127, 196, 255, 0.18); outline-offset:3px; border-radius:8px; }
+    @media (max-width:520px){
+      .nav-link{
+        display:none;
+      }
+
+      .wrap{
+        padding:14px;
+        margin:14px auto;
+      }
+
+      header.site-header{
+        top:8px;
+      }
+
+      .brand img{
+        width:52px;
+        height:52px;
+      }
+
+      .cta-row{
+        flex-wrap:wrap;
+      }
+
+      .project-card .actions{
+        flex-direction:column;
+      }
+
+      .project-card .actions .btn{
+        width:100%;
+      }
+    }
+
+    a:focus,
+    button:focus{
+      outline:3px solid rgba(127,196,255,0.18);
+      outline-offset:3px;
+      border-radius:8px;
+    }
   </style>
 </head>
+
 <body>
+
   <div class="wrap">
 
+    <!-- HEADER -->
     <header class="site-header" role="banner">
+
       <div class="brand">
-        <!-- your image; keeps same location idea -->
-        <img src="main/cover.jpg" alt="David Peters - profile picture" />
+        <img
+          src="main/cover.jpg"
+          alt="David Peters - profile picture"
+        />
+
         <div>
           <h1>David Peters</h1>
-          <div style="color:var(--muted);font-size:13px">Front-end Web Developer • Open to work</div>
+
+          <div style="color:var(--muted);font-size:13px">
+            Front-end Web Developer • Open to work
+          </div>
         </div>
       </div>
 
-      <nav class="primary" role="navigation" aria-label="Primary navigation">
+      <nav
+        class="primary"
+        role="navigation"
+        aria-label="Primary navigation"
+      >
         <a class="nav-link" href="#about">About</a>
         <a class="nav-link" href="#skills">Skills</a>
         <a class="nav-link" href="#projects">Projects</a>
         <a class="nav-link" href="#contact">Contact</a>
-        <a class="btn" id="cvDownload" href="main/CV2.pdf" download aria-label="Download CV"> <i class="fas fa-download"></i> CV</a>
+
+        <a
+          class="btn"
+          id="cvDownload"
+          href="main/CV2.pdf"
+          download
+          aria-label="Download CV"
+        >
+          <i class="fas fa-download"></i>
+          CV
+        </a>
       </nav>
+
     </header>
 
-    <!-- HERO / About -->
+
+    <!-- HERO / ABOUT -->
     <section id="about" class="hero">
+
       <div class="intro card">
+
         <h2>About me</h2>
+
         <p style="color:var(--muted)">
-          Hi — I'm <strong>David Peters</strong>. I design & build responsive web apps and interfaces.
-          I work across HTML, CSS, JS and modern frameworks like React, Redux. I value clarity, accessibility,
-          and performance. Currently open to freelance and full-time roles.
+          Hi — I'm <strong>David Peters</strong>. I design & build
+          responsive web apps and interfaces. I work across HTML,
+          CSS, JS and modern frameworks like React, Redux. I value
+          clarity, accessibility, and performance. Currently open
+          to freelance and full-time roles.
         </p>
 
         <div class="cta-row">
-          <a class="btn" id="openCvModalBtn"><i class="fas fa-file-alt"></i> View CV</a>
-          <a class="btn secondary" href="#projects"><i class="fas fa-laptop-code"></i> See Projects</a>
+
+          <button
+            class="btn"
+            id="openCvModalBtn"
+            type="button"
+          >
+            <i class="fas fa-file-alt"></i>
+            View CV
+          </button>
+
+          <a
+            class="btn secondary"
+            href="#projects"
+          >
+            <i class="fas fa-laptop-code"></i>
+            See Projects
+          </a>
+
         </div>
 
-        <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap">
+        <div
+          style="
+            margin-top:18px;
+            display:flex;
+            gap:12px;
+            flex-wrap:wrap;
+          "
+        >
+
           <div style="min-width:150px;">
             <strong>Location</strong>
-            <div style="color:var(--muted)">Nigeria</div>
+
+            <div style="color:var(--muted)">
+              Nigeria
+            </div>
           </div>
+
           <div style="min-width:120px;">
             <strong>Email</strong>
-            <div style="color:var(--muted)">davidoluwaseun874@gmail.com</div>
+
+            <div style="color:var(--muted)">
+              davidoluwaseun874@gmail.com
+            </div>
           </div>
+
         </div>
+
       </div>
 
-      <aside class="profile-card card" aria-label="Profile card">
-        <img src="main/background.jpeg" alt="Project / design sample">
+
+      <!-- PROFILE CARD -->
+      <aside
+        class="profile-card card"
+        aria-label="Profile card"
+      >
+
+        <img
+          src="main/background.jpeg"
+          alt="Project / design sample"
+        />
+
         <div class="profile-meta">
-          <div class="meta-item"><strong>10+</strong><span style="color:var(--muted)">Projects</span></div>
-          <div class="meta-item"><strong>5</strong><span style="color:var(--muted)">Companies</span></div>
+
+          <div class="meta-item">
+            <strong>10+</strong>
+            <span style="color:var(--muted)">
+              Projects
+            </span>
+          </div>
+
+          <div class="meta-item">
+            <strong>5</strong>
+            <span style="color:var(--muted)">
+              Companies
+            </span>
+          </div>
+
         </div>
-        <div style="width:100%; display:flex; gap:8px; justify-content:center">
-          <a class="btn" href="https://davcent.online" target="_blank" rel="noopener">Visit Davcent</a>
-          <a class="btn secondary" href="main/CV2.pdf" download><i class="fas fa-download"></i> Download CV</a>
+
+        <div
+          style="
+            width:100%;
+            display:flex;
+            gap:8px;
+            justify-content:center;
+            flex-wrap:wrap;
+          "
+        >
+
+          <a
+            class="btn"
+            href="https://davcent.online"
+            target="_blank"
+            rel="noopener"
+          >
+            Visit Davcent
+          </a>
+
+          <a
+            class="btn secondary"
+            href="main/CV2.pdf"
+            download
+          >
+            <i class="fas fa-download"></i>
+            Download CV
+          </a>
+
         </div>
+
       </aside>
+
     </section>
 
-    <!-- Experience (kept minimal & clean) -->
-    <section class="card" id="experience" aria-labelledby="expTitle">
+
+    <!-- EXPERIENCE -->
+    <section
+      class="card"
+      id="experience"
+      aria-labelledby="expTitle"
+    >
+
       <div class="section-title">
-        <h3 id="expTitle">Experience</h3>
+
+        <h3 id="expTitle">
+          Experience
+        </h3>
+
       </div>
+
       <p style="color:var(--muted)">
-        I've worked with companies and clients including <a href="https://davcent.online" target="_blank" rel="noopener">DAVCENT</a> and <a href="#" target="_blank" rel="noopener">NIKE-OBI-TECH</a>. I focus on accessible, performant front-end solutions.
+
+        I've worked with companies and clients including
+
+        <a
+          href="https://davcent.online"
+          target="_blank"
+          rel="noopener"
+        >
+          DAVCENT
+        </a>
+
+        and
+
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener"
+        >
+          NIKE-OBI-TECH
+        </a>.
+
+        I focus on accessible, performant front-end solutions.
+
       </p>
+
     </section>
 
-    <!-- Skills -->
-    <section class="card" id="skills" aria-labelledby="skillsTitle">
+
+    <!-- SKILLS -->
+    <section
+      class="card"
+      id="skills"
+      aria-labelledby="skillsTitle"
+    >
+
       <div class="section-title">
-        <h3 id="skillsTitle">Skills</h3>
-        <div style="color:var(--muted);font-size:13px">Tools & frameworks I use regularly</div>
+
+        <h3 id="skillsTitle">
+          Skills
+        </h3>
+
+        <div
+          style="
+            color:var(--muted);
+            font-size:13px;
+          "
+        >
+          Tools & frameworks I use regularly
+        </div>
+
       </div>
+
 
       <div style="margin-top:12px">
-        <h4 style="margin:0 0 8px 0">Design & Markup</h4>
-        <div class="skills-grid" role="list">
-          <div class="skill" role="listitem"><i class="fab fa-html5"></i> HTML</div>
-          <div class="skill" role="listitem"><i class="fab fa-css3-alt"></i> CSS / SASS</div>
-          <div class="skill" role="listitem"><i class="fab fa-bootstrap"></i> Bootstrap</div>
-          <div class="skill" role="listitem"><i class="fab fa-js-square"></i> JavaScript</div>
-        </div>
 
-        <h4 style="margin:12px 0 8px 0">Front-end & Back-end</h4>
-        <div class="skills-grid">
-          <div class="skill" role="listitem"><i class="fab fa-react"></i> React</div>
-          <div class="skill" role="listitem"><i class="fab fa-node-js"></i> Node.js</div>
-          <div class="skill" role="listitem"><i class="fab fa-python"></i> Python</div>
-          <div class="skill" role="listitem"><i class="fab fa-js"></i> jQuery</div>
-        </div>
-      </div>
-    </section>
+        <h4 style="margin:0 0 8px 0">
+          Design & Markup
+        </h4>
 
-    <!-- Projects -->
-    <section class="card" id="projects" aria-labelledby="projectsTitle">
-      <div class="section-title">
-        <h3 id="projectsTitle">Projects</h3>
-        <div style="color:var(--muted);font-size:13px">Click preview to view a live demo inside the page</div>
-      </div>
+        <div
+          class="skills-grid"
+          role="list"
+        >
 
-      <div class="projects-grid" id="projectsGrid" aria-live="polite">
-        <!-- Project cards will be inserted here by JS -->
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="card" id="contact" aria-labelledby="contactTitle">
-      <div class="section-title">
-        <h3 id="contactTitle">Contact</h3>
-        <div class="contact-bar">
-          <div class="social" aria-hidden="false">
-            <a href="https://wa.me/08087846847" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61551330303945" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com/davidpeters874" target="_blank" rel="noopener" title="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/davidpeters1098" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@Davcent" target="_blank" rel="noopener" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <div class="skill" role="listitem">
+            <i class="fab fa-html5"></i>
+            HTML
           </div>
+
+          <div class="skill" role="listitem">
+            <i class="fab fa-css3-alt"></i>
+            CSS / SASS
+          </div>
+
+          <div class="skill" role="listitem">
+            <i class="fab fa-bootstrap"></i>
+            Bootstrap
+          </div>
+
+          <div class="skill" role="listitem">
+            <i class="fab fa-js-square"></i>
+            JavaScript
+          </div>
+
         </div>
+
+
+        <h4 style="margin:12px 0 8px 0">
+          Front-end & Back-end
+        </h4>
+
+        <div class="skills-grid">
+
+          <div class="skill" role="listitem">
+            <i class="fab fa-react"></i>
+            React
+          </div>
+
+          <div class="skill" role="listitem">
+            <i class="fab fa-node-js"></i>
+            Node.js
+          </div>
+
+          <div class="skill" role="listitem">
+            <i class="fab fa-python"></i>
+            Python
+          </div>
+
+          <div class="skill" role="listitem">
+            <i class="fab fa-js"></i>
+            jQuery
+          </div>
+
+        </div>
+
       </div>
 
-      <p style="color:var(--muted)">Email: <strong>davidoluwaseun874@gmail.com</strong> • Phone: <strong>08087846847</strong></p>
-
-      <div style="display:flex; gap:12px; flex-wrap:wrap;">
-        <a class="btn" href="https://wa.me/08087846847" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Message</a>
-        <a class="btn secondary" href="main/CV2.pdf" download><i class="fas fa-download"></i> Download CV</a>
-      </div>
     </section>
 
+
+    <!-- PROJECTS -->
+    <section
+      class="card"
+      id="projects"
+      aria-labelledby="projectsTitle"
+    >
+
+      <div class="section-title">
+
+        <h3 id="projectsTitle">
+          Projects
+        </h3>
+
+        <div
+          style="
+            color:var(--muted);
+            font-size:13px;
+          "
+        >
+          Click preview to view a live demo inside the page
+        </div>
+
+      </div>
+
+
+      <div
+        class="projects-grid"
+        id="projectsGrid"
+        aria-live="polite"
+      >
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section
+      class="card"
+      id="contact"
+      aria-labelledby="contactTitle"
+    >
+
+      <div class="section-title">
+
+        <h3 id="contactTitle">
+          Contact
+        </h3>
+
+        <div class="contact-bar">
+
+          <div
+            class="social"
+            aria-hidden="false"
+          >
+
+            <a
+              href="https://wa.me/08087846847"
+              target="_blank"
+              rel="noopener"
+              title="WhatsApp"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <a
+              href="https://www.facebook.com/profile.php?id=61551330303945"
+              target="_blank"
+              rel="noopener"
+              title="Facebook"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a
+              href="https://twitter.com/davidpeters874"
+              target="_blank"
+              rel="noopener"
+              title="Twitter"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+
+            <a
+              href="https://www.instagram.com/davidpeters1098"
+              target="_blank"
+              rel="noopener"
+              title="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a
+              href="https://www.youtube.com/@Davcent"
+              target="_blank"
+              rel="noopener"
+              title="YouTube"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <p style="color:var(--muted)">
+
+        Email:
+        <strong>
+          davidoluwaseun874@gmail.com
+        </strong>
+
+        •
+
+        Phone:
+        <strong>
+          08087846847
+        </strong>
+
+      </p>
+
+
+      <div
+        style="
+          display:flex;
+          gap:12px;
+          flex-wrap:wrap;
+        "
+      >
+
+        <a
+          class="btn"
+          href="https://wa.me/08087846847"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fab fa-whatsapp"></i>
+          Message
+        </a>
+
+        <a
+          class="btn secondary"
+          href="main/CV2.pdf"
+          download
+        >
+          <i class="fas fa-download"></i>
+          Download CV
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
     <footer>
-      © <span id="year"></span> David Peters — Built with care • <span style="color:var(--muted)">Front-end • UI/UX</span>
+
+      © <span id="year"></span>
+      David Peters — Built with care •
+
+      <span style="color:var(--muted)">
+        Front-end • UI/UX
+      </span>
+
     </footer>
+
   </div>
 
-  <!-- Project & CV Modal (shared markup) -->
-  <div id="modalBackdrop" class="modal-backdrop" role="dialog" aria-hidden="true" aria-modal="true">
-    <div class="modal" role="document" aria-labelledby="modalTitle">
+
+  <!-- PROJECT / CV MODAL -->
+  <div
+    id="modalBackdrop"
+    class="modal-backdrop"
+    role="dialog"
+    aria-hidden="true"
+    aria-modal="true"
+  >
+
+    <div
+      class="modal"
+      role="document"
+      aria-labelledby="modalTitle"
+    >
+
       <header>
-        <div style="display:flex; gap:12px; align-items:center">
-          <strong id="modalTitle">Preview</strong>
-          <div id="modalSubtitle" style="color:var(--muted); font-size:13px"></div>
+
+        <div
+          style="
+            display:flex;
+            gap:12px;
+            align-items:center;
+          "
+        >
+
+          <strong id="modalTitle">
+            Preview
+          </strong>
+
+          <div
+            id="modalSubtitle"
+            style="
+              color:var(--muted);
+              font-size:13px;
+            "
+          >
+          </div>
+
         </div>
+
+
         <div>
-          <button id="modalOpenLink" class="btn secondary" style="margin-right:8px" target="_blank">Open in new tab</button>
-          <button id="closeModalBtn" class="btn secondary" aria-label="Close preview"><i class="fas fa-times"></i></button>
+
+          <button
+            id="modalOpenLink"
+            class="btn secondary"
+            style="margin-right:8px"
+            type="button"
+          >
+            Open in new tab
+          </button>
+
+          <button
+            id="closeModalBtn"
+            class="btn secondary"
+            aria-label="Close preview"
+            type="button"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+
         </div>
+
       </header>
 
-      <iframe id="modalFrame" src="" title="Project preview"></iframe>
+
+      <iframe
+        id="modalFrame"
+        src=""
+        title="Project preview"
+      >
+      </iframe>
+
 
       <div class="modal-actions">
-        <a id="modalDownload" class="btn" href="#" download><i class="fas fa-download"></i> Download</a>
+
+        <a
+          id="modalDownload"
+          class="btn"
+          href="#"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fas fa-external-link-alt"></i>
+          Open Project
+        </a>
+
       </div>
+
     </div>
+
   </div>
 
-  <script>
-    // === Data (keeps your project list) ===
-    // kept the original project paths as provided in your file,
-    // but you can update these to the correct relative paths or full URLs.
-    const PROJECTS = [
-      { id: 'photo_album', title: 'Photo Album', path: 'photo_album/index.html', type: 'HTML/CSS' },
-      { id: 'cafe_menu', title: 'Cafe Menu', path: 'Cafe_menu/index.html', type: 'HTML/CSS' },
-      { id: 'color_markers', title: 'Color Markers', path: 'Color_markers/index.html', type: 'HTML/CSS' },
-      { id: 'registration_form', title: 'Registration Form', path: 'Registration_form/index.html', type: 'HTML/CSS' },
-      { id: 'rothko', title: 'Rothko Painting', path: 'Rothko_Painting/index.html', type: 'HTML/CSS' },
-      { id: 'photo_gallery', title: 'Photo Gallery', path: 'Photo_Gallery/index.html', type: 'HTML/CSS' },
-      { id: 'nutrition_label', title: 'Nutrition Label', path: 'Nutrition_Label/index.html', type: 'HTML/CSS' },
-      { id: 'balancesheet', title: 'Balance Sheet', path: 'Balancesheet/index.html', type: 'HTML/CSS' },
-      { id: 'accessibility_quiz', title: 'Accessibility Quiz', path: 'Accessibility_quiz/index.html', type: 'HTML/CSS' },
-      { id: 'at_services', title: 'AT-Services', path: 'AT-Services/index.html', type: 'HTML/CSS' },
-      { id: 'ferris_wheel', title: 'Ferris Wheel', path: 'Ferris_wheel/index.html', type: 'HTML/CSS' },
 
-      // JS / Game projects (as in your original)
-      { id: 'exam_test', title: 'Exam Test', path: 'GNS_103&105_test/exam.html', type: 'JavaScript' },
-      { id: 'game_1', title: 'Game Dev 1', path: 'Game_Dev_Project/Game_Dev_1/index.html', type: 'JavaScript' },
-      { id: 'game_2', title: 'Game Dev 2', path: 'Game_Dev_Project/Game_Dev_2/index.html', type: 'JavaScript' },
-      { id: 'game_3A', title: 'Game Dev 3A', path: 'Game_Dev_Project/Game_Dev_3/GD 3A/index.html', type: 'JavaScript' },
-      { id: 'game_3B', title: 'Game Dev 3B', path: 'Game_Dev_Project/Game_Dev_3/GD 3B/index.html', type: 'JavaScript' },
-      { id: 'game_3C', title: 'Game Dev 3C', path: 'Game_Dev_Project/Game_Dev_3/GD 3C/index.html', type: 'JavaScript' },
-      { id: 'game_3D', title: 'Game Dev 3D', path: 'Game_Dev_Project/Game_Dev_3/GD 3D/index.html', type: 'JavaScript' },
-      { id: 'game_4', title: 'Game Dev 4', path: 'Game_Dev_Project/Game_Dev_4/index.html', type: 'JavaScript' },
-      { id: 'game_5', title: 'Game Dev 5', path: 'Game_Dev_Project/Game_Dev_5/index.html', type: 'JavaScript' },
-      { id: 'game_6', title: 'Game Dev 6', path: 'Game_Dev_Project/Game_Dev_6/index.html', type: 'JavaScript' },
-      { id: 'game_7', title: 'Game Dev 7', path: 'Game_Dev_Project/Game_Dev_7/index.html', type: 'JavaScript' },
-      { id: 'game_8', title: 'Game Dev 8', path: 'Game_Dev_Project/Game_Dev_8/index.html', type: 'JavaScript' },
-      { id: 'ogm_logo', title: 'OGM Logo', path: 'OGM_LOGO/index.html', type: 'JavaScript' }
-      // add more entries here as needed
+  <script>
+
+    /*
+     * ==========================================================
+     * PROJECT LIST
+     * ==========================================================
+     */
+
+    const PROJECTS = [
+
+      /*
+       * HTML / CSS PROJECTS
+       */
+
+      {
+        id: 'photo_album',
+        title: 'Photo Album',
+        path: 'photo_album/index.html',
+        type: 'HTML/CSS'
+      },
+
+      {
+        id: 'cafe_menu',
+        title: 'Cafe Menu',
+        path: 'Cafe_menu/index.html',
+        type: 'HTML/CSS'
+      },
+
+      {
+        id: 'color_markers',
+        title: 'Color Markers',
+        path: 'Color_markers/index.html',
+        type: 'HTML/CSS'
+      },
+
+      {
+        id: 'registration_form',
+        title: 'Registration Form',
+        path: 'Registration_form/index.html',
+        type: 'HTML/CSS'
+      },
+
+      {
+        id: 'rothko',
+        title: 'Rothko Painting',
+        path: 'Rothko_Painting/index.html',
+        type: 'HTML/CSS'
+      },
+
+      {
+        id: 'photo_gallery',
+        title: 'Photo Gallery',
+        path: 'Photo_Gallery/index.html',
+        type: 'HTML/CSS'
+      },
+
+      {
+        id: 'nutrition_label',
+        title: 'Nutrition Label',
+        path: 'Nutrition_Label/index.html',
+        type: 'HTML/CSS'
+      },
+
+      {
+        id: 'balancesheet',
+        title: 'Balance Sheet',
+        path: 'Balancesheet/index.html',
+        type: 'HTML/CSS'
+      },
+
+      {
+        id: 'accessibility_quiz',
+        title: 'Accessibility Quiz',
+        path: 'Accessibility_quiz/index.html',
+        type: 'HTML/CSS'
+      },
+
+      {
+        id: 'at_services',
+        title: 'AT-Services',
+        path: 'AT-Services/index.html',
+        type: 'HTML/CSS'
+      },
+
+      {
+        id: 'ferris_wheel',
+        title: 'Ferris Wheel',
+        path: 'Ferris_wheel/index.html',
+        type: 'HTML/CSS'
+      },
+
+
+      /*
+       * JAVASCRIPT / GAME PROJECTS
+       */
+
+      {
+        id: 'exam_test',
+        title: 'Exam Test',
+        path: 'GNS_103&105_test/exam.html',
+        type: 'JavaScript'
+      },
+
+      {
+        id: 'game_1',
+        title: 'Game Dev 1',
+        path: 'Game_Dev_Project/Game_Dev_1/index.html',
+        type: 'JavaScript'
+      },
+
+      {
+        id: 'game_2',
+        title: 'Game Dev 2',
+        path: 'Game_Dev_Project/Game_Dev_2/index.html',
+        type: 'JavaScript'
+      },
+
+      {
+        id: 'game_3A',
+        title: 'Game Dev 3A',
+        path: 'Game_Dev_Project/Game_Dev_3/GD 3A/index.html',
+        type: 'JavaScript'
+      },
+
+      {
+        id: 'game_3B',
+        title: 'Game Dev 3B',
+        path: 'Game_Dev_Project/Game_Dev_3/GD 3B/index.html',
+        type: 'JavaScript'
+      },
+
+      {
+        id: 'game_3C',
+        title: 'Game Dev 3C',
+        path: 'Game_Dev_Project/Game_Dev_3/GD 3C/index.html',
+        type: 'JavaScript'
+      },
+
+      {
+        id: 'game_3D',
+        title: 'Game Dev 3D',
+        path: 'Game_Dev_Project/Game_Dev_3/GD 3D/index.html',
+        type: 'JavaScript'
+      },
+
+      {
+        id: 'game_4',
+        title: 'Game Dev 4',
+        path: 'Game_Dev_Project/Game_Dev_4/index.html',
+        type: 'JavaScript'
+      },
+
+      {
+        id: 'game_5',
+        title: 'Game Dev 5',
+        path: 'Game_Dev_Project/Game_Dev_5/index.html',
+        type: 'JavaScript'
+      },
+
+      {
+        id: 'game_6',
+        title: 'Game Dev 6',
+        path: 'Game_Dev_Project/Game_Dev_6/index.html',
+        type: 'JavaScript'
+      },
+
+      {
+        id: 'game_7',
+        title: 'Game Dev 7',
+        path: 'Game_Dev_Project/Game_Dev_7/index.html',
+        type: 'JavaScript'
+      },
+
+      {
+        id: 'game_8',
+        title: 'Game Dev 8',
+        path: 'Game_Dev_Project/Game_Dev_8/index.html',
+        type: 'JavaScript'
+      },
+
+      {
+        id: 'ogm_logo',
+        title: 'OGM Logo',
+        path: 'OGM_LOGO/index.html',
+        type: 'JavaScript'
+      },
+
+
+      /*
+       * REACT / WEB APPLICATION PROJECTS
+       */
+
+      {
+        id: 'veepay_dashboard',
+        title: 'VeePay Dashboard',
+        path: 'https://veepay-dashboard-zeta.vercel.app/user/info/1',
+        type: 'React / Dashboard',
+        external: true
+      },
+
+      {
+        id: 'domyheritage',
+        title: 'DomyHeritage',
+        path: 'https://domyheritage-domy-frontend-xrcu.vercel.app/',
+        type: 'React, Next js / Real Estate',
+        external: true
+      }
+
+      {
+        id: 'books online store',
+        title: 'WEM',
+        path: 'https://wayfinder-reads.vercel.app/',
+        type: 'React / Sales/Online-store',
+        external: true
+      }
+
     ];
 
-    // === Utilities & DOM refs ===
-    const grid = document.getElementById('projectsGrid');
-    const modalBackdrop = document.getElementById('modalBackdrop');
-    const modalFrame = document.getElementById('modalFrame');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalSubtitle = document.getElementById('modalSubtitle');
-    const modalOpenLink = document.getElementById('modalOpenLink');
-    const modalDownload = document.getElementById('modalDownload');
-    const closeModalBtn = document.getElementById('closeModalBtn');
 
-    // Insert project cards
-    function renderProjects(){
-      grid.innerHTML = '';
-      PROJECTS.forEach(p => {
-        const card = document.createElement('article');
-        card.className = 'project-card';
-        card.innerHTML = `
-          <div class="title">${escapeHtml(p.title)}</div>
-          <div class="meta">${escapeHtml(p.type)}</div>
-          <div class="actions" data-path="${encodeURI(p.path)}">
-            <button class="btn preview-btn" data-path="${encodeURI(p.path)}"><i class="fas fa-eye"></i> Preview</button>
-            <a class="btn secondary" href="${encodeURI(p.path)}" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Open</a>
-          </div>
-        `;
-        grid.appendChild(card);
-      });
-    }
+    /*
+     * ==========================================================
+     * DOM REFERENCES
+     * ==========================================================
+     */
 
-    // Basic escape helper
+    const grid =
+      document.getElementById('projectsGrid');
+
+    const modalBackdrop =
+      document.getElementById('modalBackdrop');
+
+    const modalFrame =
+      document.getElementById('modalFrame');
+
+    const modalTitle =
+      document.getElementById('modalTitle');
+
+    const modalSubtitle =
+      document.getElementById('modalSubtitle');
+
+    const modalOpenLink =
+      document.getElementById('modalOpenLink');
+
+    const modalDownload =
+      document.getElementById('modalDownload');
+
+    const closeModalBtn =
+      document.getElementById('closeModalBtn');
+
+
+    /*
+     * ==========================================================
+     * ESCAPE HTML
+     * ==========================================================
+     */
+
     function escapeHtml(str){
-      return String(str).replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[s]));
+
+      return String(str).replace(
+        /[&<>"']/g,
+        function(s){
+          return {
+            '&':'&amp;',
+            '<':'&lt;',
+            '>':'&gt;',
+            '"':'&quot;',
+            "'":'&#39;'
+          }[s];
+        }
+      );
+
     }
 
-    // Open modal with path (project preview or CV)
-    function openModal(path, title = 'Preview', downloadHref = null){
+
+    /*
+     * ==========================================================
+     * RENDER PROJECTS
+     * ==========================================================
+     */
+
+    function renderProjects(){
+
+      grid.innerHTML = '';
+
+      PROJECTS.forEach(function(project){
+
+        const card =
+          document.createElement('article');
+
+        card.className = 'project-card';
+
+        const encodedPath =
+          encodeURI(project.path);
+
+        const isExternal =
+          project.external === true;
+
+        const previewButton =
+          isExternal
+            ? `
+              <button
+                class="btn preview-btn"
+                type="button"
+                data-path="${encodedPath}"
+                data-title="${escapeHtml(project.title)}"
+              >
+                <i class="fas fa-eye"></i>
+                Preview
+              </button>
+            `
+            : `
+              <button
+                class="btn preview-btn"
+                type="button"
+                data-path="${encodedPath}"
+                data-title="${escapeHtml(project.title)}"
+              >
+                <i class="fas fa-eye"></i>
+                Preview
+              </button>
+            `;
+
+        card.innerHTML = `
+
+          <div class="title">
+            ${escapeHtml(project.title)}
+          </div>
+
+          <div class="meta">
+            ${escapeHtml(project.type)}
+          </div>
+
+          <div class="actions">
+
+            ${previewButton}
+
+            <a
+              class="btn secondary"
+              href="${encodedPath}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fas fa-external-link-alt"></i>
+              Open
+            </a>
+
+          </div>
+
+        `;
+
+        grid.appendChild(card);
+
+      });
+
+    }
+
+
+    /*
+     * ==========================================================
+     * OPEN MODAL
+     * ==========================================================
+     */
+
+    function openModal(
+      path,
+      title = 'Preview',
+      downloadHref = null
+    ){
+
       modalFrame.src = path;
+
       modalTitle.textContent = title;
+
       modalSubtitle.textContent = path;
-      modalOpenLink.onclick = () => window.open(path, '_blank', 'noopener');
-      modalDownload.href = downloadHref || path;
+
+      modalOpenLink.onclick =
+        function(){
+
+          window.open(
+            path,
+            '_blank',
+            'noopener,noreferrer'
+          );
+
+        };
+
+      modalDownload.href =
+        downloadHref || path;
+
+      modalDownload.removeAttribute('download');
+
+      modalDownload.innerHTML = `
+        <i class="fas fa-external-link-alt"></i>
+        Open Project
+      `;
+
       modalBackdrop.style.display = 'grid';
-      modalBackdrop.setAttribute('aria-hidden','false');
-      // trap focus (simple)
+
+      modalBackdrop.setAttribute(
+        'aria-hidden',
+        'false'
+      );
+
       closeModalBtn.focus();
+
     }
 
-    // Close modal and clear iframe to stop playback
+
+    /*
+     * ==========================================================
+     * CLOSE MODAL
+     * ==========================================================
+     */
+
     function closeModal(){
+
       modalBackdrop.style.display = 'none';
-      modalBackdrop.setAttribute('aria-hidden','true');
+
+      modalBackdrop.setAttribute(
+        'aria-hidden',
+        'true'
+      );
+
       modalFrame.src = 'about:blank';
+
     }
 
-    // Event delegation for preview buttons
-    grid.addEventListener('click', (ev) => {
-      const btn = ev.target.closest('[data-path]');
-      if(!btn) return;
-      const path = btn.getAttribute('data-path') || btn.dataset.path;
-      if(path){
-        openModal(path, 'Project Preview', path);
+
+    /*
+     * ==========================================================
+     * PROJECT PREVIEW EVENTS
+     * ==========================================================
+     */
+
+    grid.addEventListener(
+      'click',
+      function(ev){
+
+        const button =
+          ev.target.closest('.preview-btn');
+
+        if(!button){
+          return;
+        }
+
+        const path =
+          button.getAttribute('data-path');
+
+        const title =
+          button.getAttribute('data-title') ||
+          'Project Preview';
+
+        if(path){
+
+          openModal(
+            path,
+            title,
+            path
+          );
+
+        }
+
       }
-    });
+    );
 
-    // Close modal handlers
-    closeModalBtn.addEventListener('click', closeModal);
-    modalBackdrop.addEventListener('click', (ev) => {
-      if(ev.target === modalBackdrop) closeModal();
-    });
-    document.addEventListener('keydown', (ev) => {
-      if(ev.key === 'Escape') closeModal();
-    });
 
-    // CV button opens modal with main/CV2.pdf (per your request)
-    document.getElementById('openCvModalBtn').addEventListener('click', () => {
-      openModal('main/CV2.pdf', 'Curriculum Vitae', 'main/CV2.pdf');
-    });
+    /*
+     * ==========================================================
+     * MODAL EVENTS
+     * ==========================================================
+     */
 
-    // Page init
+    closeModalBtn.addEventListener(
+      'click',
+      closeModal
+    );
+
+
+    modalBackdrop.addEventListener(
+      'click',
+      function(ev){
+
+        if(ev.target === modalBackdrop){
+
+          closeModal();
+
+        }
+
+      }
+    );
+
+
+    document.addEventListener(
+      'keydown',
+      function(ev){
+
+        if(ev.key === 'Escape'){
+
+          closeModal();
+
+        }
+
+      }
+    );
+
+
+    /*
+     * ==========================================================
+     * CV MODAL
+     * ==========================================================
+     */
+
+    document
+      .getElementById('openCvModalBtn')
+      .addEventListener(
+        'click',
+        function(){
+
+          modalFrame.src =
+            'main/CV2.pdf';
+
+          modalTitle.textContent =
+            'Curriculum Vitae';
+
+          modalSubtitle.textContent =
+            'David Peters — CV';
+
+          modalOpenLink.onclick =
+            function(){
+
+              window.open(
+                'main/CV2.pdf',
+                '_blank',
+                'noopener,noreferrer'
+              );
+
+            };
+
+          modalDownload.href =
+            'main/CV2.pdf';
+
+          modalDownload.setAttribute(
+            'download',
+            ''
+          );
+
+          modalDownload.innerHTML = `
+            <i class="fas fa-download"></i>
+            Download CV
+          `;
+
+          modalBackdrop.style.display =
+            'grid';
+
+          modalBackdrop.setAttribute(
+            'aria-hidden',
+            'false'
+          );
+
+          closeModalBtn.focus();
+
+        }
+      );
+
+
+    /*
+     * ==========================================================
+     * INITIALIZE PAGE
+     * ==========================================================
+     */
+
     renderProjects();
-    document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Accessibility & small improvements
-    // Preventing tabbing into iframe content when hidden
-    modalBackdrop.addEventListener('transitionend', () => {
-      // noop for now, placeholder if you want advanced focus trap
-    });
+    document.getElementById('year')
+      .textContent =
+      new Date().getFullYear();
 
   </script>
+
 </body>
 </html>
+
